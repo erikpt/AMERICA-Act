@@ -242,7 +242,7 @@ If a manufacturer **refuses to offer reasonable terms** under Section 5(h) or en
 
 #### (e) Medical Advisory Committee (MAC).
 1. **Composition.** Two physicians per state (100 total), selected by lottery; two‑year non‑renewable terms.  
-2. **Duties.** Biennial review of Essential Services and co‑pay applicability; recommendations require a two‑thirds vote and are binding unless overridden by Congress.  
+2. **Duties.** Biennial review of Essential Services and co‑pay applicability; recommendations require a two‑thirds vote and are **binding**. Congress may override a MAC recommendation only by concurrent resolution passed by a two‑thirds vote of both chambers, accompanied by written findings — adopted as part of the resolution — stating with specificity why the recommendation is contrary to the public welfare. A concurrent resolution that lacks such findings or fails to achieve a two‑thirds vote in either chamber is without legal effect and does not suspend the binding recommendation.  
 3. **PCAB Liaisons.** Two non‑voting **PCAB** liaisons shall attend MAC meetings and may offer public comment and written recommendations for the record.
 
 ---
