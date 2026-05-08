@@ -22,68 +22,126 @@ import SurplusChart from '../components/SurplusChart.astro';
     </div>
   </section>
 
-  <!-- Full co-pay table + chart -->
-  <section class="py-16 px-4">
+  <!-- Always $0 callout -->
+  <section class="py-8 px-4 bg-teal/5 border-b border-teal/20">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold text-navy mb-8">Co-pay schedule</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <p class="text-sm font-semibold text-teal mb-2 uppercase tracking-wide">Always $0 — no co-pay, no exceptions</p>
+      <div class="flex flex-wrap gap-3">
+        {['Preventive care & screenings', 'Vaccinations', 'Children\'s wellness visits', 'Telemedicine (mirrors in-person rate)'].map(item => (
+          <span class="bg-white border border-teal/30 text-navy text-sm px-3 py-1 rounded-full">{item}</span>
+        ))}
+      </div>
+    </div>
+  </section>
 
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm border-collapse">
-            <thead>
-              <tr class="bg-navy text-white text-left text-xs uppercase tracking-wide">
-                <th class="px-3 py-3 rounded-tl-lg font-semibold">Income</th>
-                <th class="px-3 py-3 font-semibold">Primary</th>
-                <th class="px-3 py-3 font-semibold">Specialist</th>
-                <th class="px-3 py-3 font-semibold">ER</th>
-                <th class="px-3 py-3 rounded-tr-lg font-semibold">Rx</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-100">
-              <tr class="bg-teal/5">
-                <td class="px-3 py-3 font-semibold text-navy">Under $75k</td>
-                <td class="px-3 py-3 text-teal font-bold">$0</td>
-                <td class="px-3 py-3">$25</td>
-                <td class="px-3 py-3">$50</td>
-                <td class="px-3 py-3">$10</td>
-              </tr>
-              <tr>
-                <td class="px-3 py-3 font-semibold text-navy">$75k – $200k</td>
-                <td class="px-3 py-3">$20</td>
-                <td class="px-3 py-3">$50</td>
-                <td class="px-3 py-3">$100</td>
-                <td class="px-3 py-3">$20</td>
-              </tr>
-              <tr class="bg-gray-50">
-                <td class="px-3 py-3 font-semibold text-navy">$200k – $500k</td>
-                <td class="px-3 py-3">$40</td>
-                <td class="px-3 py-3">$100</td>
-                <td class="px-3 py-3">$200</td>
-                <td class="px-3 py-3">$40</td>
-              </tr>
-              <tr>
-                <td class="px-3 py-3 font-semibold text-navy">Over $500k</td>
-                <td class="px-3 py-3">$60</td>
-                <td class="px-3 py-3">$150</td>
-                <td class="px-3 py-3">$300</td>
-                <td class="px-3 py-3">$60</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="mt-4 bg-teal/5 border border-teal/20 rounded-lg p-4">
-            <p class="text-sm font-semibold text-navy mb-1">Annual out-of-pocket cap: 5% of your AGI</p>
-            <p class="text-xs text-gray-500">
-              Once you hit the cap, additional co-pays are automatically refunded through the National Health Portal.
-              Drug co-pays count toward the cap. Preventive care, vaccines, and children's wellness visits are always $0.
-            </p>
-          </div>
-        </div>
+  <!-- Full co-pay table -->
+  <section id="full-copay-schedule" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-2">Full co-pay schedule</h2>
+      <p class="text-gray-500 text-sm mb-6">Based on your adjusted gross income (AGI). All amounts per visit or fill unless noted.</p>
 
+      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-navy text-white text-xs uppercase tracking-wide text-left">
+              <th class="px-4 py-3 font-semibold min-w-[140px]">Income (AGI)</th>
+              <th class="px-3 py-3 font-semibold">Primary care</th>
+              <th class="px-3 py-3 font-semibold">Specialist</th>
+              <th class="px-3 py-3 font-semibold">Mental health</th>
+              <th class="px-3 py-3 font-semibold">ER</th>
+              <th class="px-3 py-3 font-semibold">Ambulance</th>
+              <th class="px-3 py-3 font-semibold">Hospital/day †</th>
+              <th class="px-3 py-3 font-semibold">Imaging</th>
+              <th class="px-3 py-3 font-semibold">Labs</th>
+              <th class="px-3 py-3 font-semibold">Rx ‡</th>
+              <th class="px-3 py-3 font-semibold">Vision visit</th>
+              <th class="px-3 py-3 font-semibold min-w-[100px]">Lenses §</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="bg-teal/5">
+              <td class="px-4 py-3 font-semibold text-navy">Under $75k<br/><span class="text-xs font-normal text-gray-500">or $150k household</span></td>
+              <td class="px-3 py-3 text-teal font-bold">$0</td>
+              <td class="px-3 py-3">$25</td>
+              <td class="px-3 py-3">$25</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$25</td>
+              <td class="px-3 py-3">$25</td>
+              <td class="px-3 py-3 text-teal font-bold">$0</td>
+              <td class="px-3 py-3">$10</td>
+              <td class="px-3 py-3">$25</td>
+              <td class="px-3 py-3">$50</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-navy">$75k – $200k</td>
+              <td class="px-3 py-3">$20</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$100</td>
+              <td class="px-3 py-3">$100</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$10</td>
+              <td class="px-3 py-3">$20</td>
+              <td class="px-3 py-3">$25</td>
+              <td class="px-3 py-3">$100</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-3 font-semibold text-navy">$200k – $500k</td>
+              <td class="px-3 py-3">$40</td>
+              <td class="px-3 py-3">$100</td>
+              <td class="px-3 py-3">$100</td>
+              <td class="px-3 py-3">$200</td>
+              <td class="px-3 py-3">$200</td>
+              <td class="px-3 py-3">$100</td>
+              <td class="px-3 py-3">$100</td>
+              <td class="px-3 py-3">$20</td>
+              <td class="px-3 py-3">$40</td>
+              <td class="px-3 py-3">$50</td>
+              <td class="px-3 py-3">$200</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-navy">Over $500k</td>
+              <td class="px-3 py-3">$60</td>
+              <td class="px-3 py-3">$150</td>
+              <td class="px-3 py-3">$150</td>
+              <td class="px-3 py-3">$300</td>
+              <td class="px-3 py-3">$300</td>
+              <td class="px-3 py-3">$150</td>
+              <td class="px-3 py-3">$150</td>
+              <td class="px-3 py-3">$30</td>
+              <td class="px-3 py-3">$60</td>
+              <td class="px-3 py-3">$75</td>
+              <td class="px-3 py-3">$300</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footnotes -->
+      <div class="mt-4 space-y-1 text-xs text-gray-500">
+        <p>† Hospital inpatient co-pay is per day, capped at $500/year for the two lower tiers (doubled/tripled proportionally for higher tiers).</p>
+        <p>‡ Rx co-pay is the scheduled amount <em>or</em> the actual drug price, whichever is lower. Labs are $0 for the under-$75k tier (not listed as an exception under Section 4(d)(1)).</p>
+        <p>§ Lenses co-pay applies to basic prescription lenses, bifocals, and trifocals. Medically necessary lenses are covered at $0.</p>
+      </div>
+
+      <!-- OOP cap callout -->
+      <div class="mt-6 bg-navy text-white rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="text-4xl font-bold text-teal flex-shrink-0">5%</div>
         <div>
-          <CoPayChart />
-          <p class="text-xs text-gray-400 mt-3 text-center">Co-pay per visit by income tier. Preventive care excluded (always $0).</p>
+          <p class="font-semibold mb-1">Annual out-of-pocket cap: 5% of your AGI</p>
+          <p class="text-blue-200 text-sm">Once you hit this limit, all further co-pays are automatically refunded through the National Health Portal. Every dollar above the cap comes back to you — no claims to file, no appeal required. (§ 4(d)(5))</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Co-pay chart -->
+  <section class="py-8 px-4 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <CoPayChart />
+      <p class="text-xs text-gray-400 mt-3 text-center">Co-pay per visit by income tier and service type. Preventive care excluded (always $0).</p>
     </div>
   </section>
 
