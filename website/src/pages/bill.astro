@@ -1,0 +1,159 @@
+---
+import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { marked } from 'marked';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const __dir = dirname(fileURLToPath(import.meta.url));
+const billPath = join(__dir, '..', '..', '..', 'Bill_Text.md');
+const billRaw = fs.readFileSync(billPath, 'utf-8');
+
+// Build TOC from section headers
+const tocItems: { num: string; name: string; anchor: string }[] = [];
+const sectionRe = /^### SECTION (\d+)\. (.+)$/gm;
+let m: RegExpExecArray | null;
+while ((m = sectionRe.exec(billRaw)) !== null) {
+  const num = m[1];
+  const name = m[2].trim();
+  const anchor = `sec-${num}-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')}`;
+  tocItems.push({ num, name, anchor });
+}
+
+// Render markdown → HTML then inject IDs for section anchors
+let html = marked.parse(billRaw) as string;
+html = html.replace(
+  /<h3>(SECTION (\d+)\. ([^<]+))<\/h3>/g,
+  (_, full, num, name) => {
+    const id = `sec-${num}-${name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')}`;
+    return `<h3 id="${id}">${full}</h3>`;
+  }
+);
+---
+
+<BaseLayout
+  title="Full Bill Text"
+  description="Complete legislative text of the AMERICA Act of 2026 — American Medical and Essential Rights to Inclusive Care Act. All 20 sections."
+>
+  <!-- Hero -->
+  <section class="bg-navy text-white py-14 px-4 print:hidden">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+      <div>
+        <div class="text-teal text-xs font-bold uppercase tracking-widest mb-3">Full Legislative Text</div>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-2">AMERICA Act of 2026</h1>
+        <p class="text-blue-200 mb-4">American Medical and Essential Rights to Inclusive Care Act</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-blue-300">
+          <span>Sections 1–{tocItems.length}</span>
+          <span class="opacity-50">·</span>
+          <span>Integrated Draft v3</span>
+          <span class="opacity-50">·</span>
+          <span>Core CPI · Four-Pillar Financing</span>
+        </div>
+      </div>
+      <div class="flex gap-3 flex-shrink-0">
+        <a
+          href="/about"
+          class="text-sm text-blue-200 hover:text-white border border-blue-400 hover:border-white px-4 py-2 rounded transition-colors"
+        >
+          Plain-language summary
+        </a>
+        <button
+          onclick="window.print()"
+          class="text-sm text-white bg-teal hover:bg-teal/80 px-4 py-2 rounded transition-colors"
+        >
+          Print / PDF
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Note for casual readers -->
+  <div class="bg-teal/5 border-b border-teal/20 px-4 py-3 print:hidden">
+    <p class="max-w-5xl mx-auto text-sm text-gray-600">
+      <strong class="text-navy">Looking for the highlights?</strong>
+      The <a href="/coverage" class="text-teal underline">What's Covered</a>,
+      <a href="/costs" class="text-teal underline">What You Pay</a>, and
+      <a href="/about" class="text-teal underline">About the Act</a> pages have plain-language summaries.
+      This page is the full legal text.
+    </p>
+  </div>
+
+  <!-- Layout: TOC sidebar + bill content -->
+  <div class="max-w-6xl mx-auto px-4 py-10 print:py-0 print:max-w-none">
+    <div class="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12 items-start">
+
+      <!-- TOC: mobile collapsible -->
+      <aside class="print:hidden mb-8 lg:mb-0 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+        <details class="lg:hidden border border-gray-200 rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between px-4 py-3 bg-gray-50 cursor-pointer font-semibold text-navy text-sm list-none">
+            <span>Jump to section</span>
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <nav class="px-4 py-3 space-y-1">
+            {tocItems.map(({ num, name, anchor }) => (
+              <a
+                href={`#${anchor}`}
+                class="flex gap-2.5 py-1.5 text-sm text-gray-600 hover:text-navy transition-colors"
+              >
+                <span class="text-teal font-mono font-semibold text-xs mt-0.5 flex-shrink-0">§{num}</span>
+                <span class="capitalize">{name.toLowerCase()}</span>
+              </a>
+            ))}
+          </nav>
+        </details>
+
+        <!-- TOC: desktop always visible -->
+        <div class="hidden lg:block">
+          <div class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 px-2">Sections</div>
+          <nav class="space-y-0.5">
+            {tocItems.map(({ num, name, anchor }) => (
+              <a
+                href={`#${anchor}`}
+                class="flex gap-2.5 px-2 py-1.5 rounded text-sm text-gray-600 hover:text-navy hover:bg-gray-50 transition-colors group"
+              >
+                <span class="text-teal font-mono font-semibold text-xs mt-0.5 flex-shrink-0 w-5">§{num}</span>
+                <span class="capitalize text-xs leading-relaxed">{name.toLowerCase()}</span>
+              </a>
+            ))}
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Bill content -->
+      <article
+        class="prose prose-base lg:prose-lg max-w-none
+               print:prose-sm print:max-w-none
+               [&_h1]:text-2xl [&_h1]:mb-1
+               [&_h2]:text-xl [&_h2]:mt-10 [&_h2]:border-b-2 [&_h2]:border-teal/30 [&_h2]:pb-2
+               [&_h3]:text-lg [&_h3]:mt-8 [&_h3]:pt-4 [&_h3]:border-t [&_h3]:border-gray-100
+               [&_h4]:text-base [&_h4]:font-semibold [&_h4]:mt-4
+               [&_hr]:border-gray-200 [&_hr]:my-8
+               [&_ol]:list-decimal [&_ul]:list-disc
+               [&_strong]:font-semibold"
+        set:html={html}
+      />
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <div class="fixed bottom-6 right-6 print:hidden">
+    <a
+      href="#"
+      class="flex items-center gap-1.5 bg-navy text-white text-xs font-medium px-3 py-2 rounded-full shadow-lg hover:bg-navy-light transition-colors"
+    >
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+      </svg>
+      Top
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  @media print {
+    body { font-size: 11pt; }
+    article { columns: 1; }
+  }
+</style>

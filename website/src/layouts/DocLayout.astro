@@ -1,0 +1,50 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  category?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const {
+  title,
+  description,
+  category = 'Document',
+  backHref = '/resources',
+  backLabel = 'All documents',
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="bg-navy text-white py-14 px-4 print:hidden">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div>
+        <div class="text-teal text-xs font-bold uppercase tracking-widest mb-3">{category}</div>
+        <h1 class="text-3xl sm:text-4xl font-bold">{title}</h1>
+      </div>
+      <div class="flex gap-3 flex-shrink-0">
+        <a
+          href={backHref}
+          class="text-sm text-blue-200 hover:text-white border border-blue-400 hover:border-white px-4 py-2 rounded transition-colors"
+        >
+          ← {backLabel}
+        </a>
+        <button
+          onclick="window.print()"
+          class="text-sm text-white bg-teal hover:bg-teal/80 px-4 py-2 rounded transition-colors"
+        >
+          Print / PDF
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="max-w-4xl mx-auto px-4 py-12 print:py-0 print:max-w-none">
+    <slot />
+  </div>
+</BaseLayout>

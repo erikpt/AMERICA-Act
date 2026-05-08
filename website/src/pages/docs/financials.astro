@@ -1,0 +1,63 @@
+---
+import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { marked } from 'marked';
+import DocLayout from '../../layouts/DocLayout.astro';
+import SurplusChart from '../../components/SurplusChart.astro';
+import FundingChart from '../../components/FundingChart.astro';
+
+const __dir = dirname(fileURLToPath(import.meta.url));
+const raw = fs.readFileSync(join(__dir, '..', '..', '..', '..', 'Financial Modeling', 'Financials.md'), 'utf-8');
+
+let html = marked.parse(raw) as string;
+// Strip h1 — covered by layout hero
+html = html.replace(/^<h1>.*?<\/h1>\s*/s, '');
+// Strip blockquote with goal text after removing h1 (it's redundant with layout description)
+// Remove broken image tags — we use live charts instead
+html = html.replace(/<p><em>See funding waterfall:.*?<\/em><\/p>/s, '');
+html = html.replace(/<img[^>]*>/g, '');
+---
+
+<DocLayout
+  title="Financial Overview"
+  description="How the AMERICA Act pays for itself: the four-pillar financing structure, cost controls, and 10-year fiscal trajectory."
+  category="Financial Summary"
+>
+  <div class="mb-8 bg-teal/5 border border-teal/20 rounded-lg px-5 py-4 text-sm text-gray-600 print:hidden">
+    For interactive charts and full 10-year projections, see the
+    <a href="/costs" class="text-teal underline">What You Pay</a> page.
+  </div>
+
+  <!-- Live charts before the text -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12 print:hidden">
+    <div>
+      <h2 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">Year 1 Funding Sources</h2>
+      <FundingChart />
+    </div>
+    <div>
+      <h2 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">10-Year HTF Surplus ($B)</h2>
+      <SurplusChart />
+    </div>
+  </div>
+
+  <article
+    class="prose prose-base max-w-none
+           [&_h2]:text-navy [&_h2]:border-b-2 [&_h2]:border-teal/30 [&_h2]:pb-2 [&_h2]:mt-10
+           [&_h3]:text-navy
+           [&_strong]:text-navy
+           [&_table]:text-sm [&_th]:bg-navy [&_th]:text-white [&_th]:font-semibold
+           [&_blockquote]:border-l-teal [&_blockquote]:bg-teal/5 [&_blockquote]:rounded-r-lg [&_blockquote]:py-1
+           [&_hr]:border-gray-200 [&_hr]:my-8"
+    set:html={html}
+  />
+
+  <div class="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row gap-4 print:hidden">
+    <a href="/docs/one-pager" class="flex-1 bg-navy text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-navy-light transition-colors">
+      Policy one-pager →
+    </a>
+    <a href="/bill#sec-5-financing-national-health-budget-and-cost-control" class="flex-1 border border-gray-300 text-gray-700 text-center font-semibold py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors">
+      Section 5 in bill text →
+    </a>
+  </div>
+</DocLayout>

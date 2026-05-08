@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const groups = [
+  {
+    heading: 'Start here',
+    docs: [
+      {
+        href: '/docs/voter-guide',
+        category: 'Voter Guide',
+        title: 'Plain-Language Summary',
+        description: 'What the AMERICA Act means for you and your family — coverage, costs, rights, and what stays the same. No jargon.',
+        cta: 'Read the guide',
+        accent: 'bg-teal',
+      },
+    ],
+  },
+  {
+    heading: 'For policymakers',
+    docs: [
+      {
+        href: '/docs/one-pager',
+        category: 'Policy Brief',
+        title: 'Executive One-Pager',
+        description: 'Legislative staff briefing: four-pillar financing, fiscal snapshot, cost controls, and the 5-year transition plan.',
+        cta: 'Read the brief',
+        accent: 'bg-navy',
+      },
+      {
+        href: '/docs/best-ideas',
+        category: 'Policy Research',
+        title: 'Best Ideas from Around the World',
+        description: 'How AMERICA Act borrows proven tools from France, Canada, Portugal, and other high-performers — adapted for the U.S.',
+        cta: 'Read the research',
+        accent: 'bg-navy',
+      },
+    ],
+  },
+  {
+    heading: 'Financial details',
+    docs: [
+      {
+        href: '/docs/financials',
+        category: 'Financial Summary',
+        title: 'Financial Overview',
+        description: 'How the program pays for itself: the four pillars, what the U.S. saves on administrative waste, and the 10-year surplus trajectory.',
+        cta: 'See the numbers',
+        accent: 'bg-navy-light',
+      },
+      {
+        href: '/costs',
+        category: 'Interactive',
+        title: 'What You Pay',
+        description: 'Co-pay schedule by income tier, funding sources, and 10-year HTF surplus — with live charts.',
+        cta: 'Explore the data',
+        accent: 'bg-teal',
+      },
+    ],
+  },
+  {
+    heading: 'Full legislative text',
+    docs: [
+      {
+        href: '/bill',
+        category: 'Legislative Text',
+        title: 'AMERICA Act — Full Bill Text',
+        description: 'All 20 sections of the legislative draft: coverage, financing, governance, enforcement, transition, and more. Searchable, printable.',
+        cta: 'Read the bill',
+        accent: 'bg-navy',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Resources"
+  description="All AMERICA Act documents — voter guides, policy briefs, financial summaries, and the full legislative text."
+>
+  <!-- Hero -->
+  <section class="bg-navy text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Documents & Resources</h1>
+      <p class="text-blue-200 text-lg max-w-2xl leading-relaxed">
+        Everything from a plain-language voter guide to the full legislative text.
+        Pick what's useful for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Document groups -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto space-y-14">
+      {groups.map(({ heading, docs }) => (
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">{heading}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {docs.map(({ href, category, title, description, cta, accent }) => (
+              <a
+                href={href}
+                class="group bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col"
+              >
+                <div class={`inline-block text-white text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded-full mb-4 self-start ${accent}`}>
+                  {category}
+                </div>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-navy-light transition-colors">{title}</h3>
+                <p class="text-sm text-gray-600 leading-relaxed flex-1">{description}</p>
+                <div class="mt-5 text-teal text-sm font-semibold group-hover:underline">{cta} →</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- GitHub CTA -->
+  <section class="py-12 px-4 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <h2 class="text-lg font-bold text-navy mb-1">This is a living document</h2>
+        <p class="text-gray-600 text-sm">All source files are on GitHub. Propose changes, flag errors, or add supporting research.</p>
+      </div>
+      <a
+        href="https://github.com/erikpt/AMERICA-Act"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-shrink-0 bg-navy text-white font-semibold px-6 py-3 rounded-lg hover:bg-navy-light transition-colors text-sm"
+      >
+        View on GitHub ↗
+      </a>
+    </div>
+  </section>
+</BaseLayout>
