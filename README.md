@@ -13,7 +13,9 @@ Use the links below to quickly find the major reference documents in this projec
 
 * **Core Texts**
   * [Bill Text](Bill_Text.md) – Full legislative language for the Universal Healthcare Access Act.
-  * [Executive One-Pager](UHAA_One_Pager.md) – High-level summary for quick briefings.
+  * [Executive One-Pager](UHAA_One_Pager.md) – High-level summary for legislative staff briefings.
+  * [Voter Landing Page](UHAA_Voter_LandingPage.md) – Short, scannable summary for web and social.
+  * [Voter Handout](UHAA_Voter_Handout.md) – Print-ready summary for town halls and mailers.
   * [Best Ideas World One-Pager](UHAA_Best_Ideas_World_OnePager.md) – Comparative insights that shaped the proposal.
   * [Current Gaps Analysis](Current_Gaps.md) – Overview of systemic issues the Act is designed to address.
 * **Financial Modeling**

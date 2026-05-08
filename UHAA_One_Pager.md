@@ -32,16 +32,22 @@
 ## 2026 Fiscal Snapshot (billions)
 |  | Amount |
 |---|---:|
-| **HTF Outlays (reformed)** | **$5,089** |
-| **Total Inflows (central, employee 7%)** | **$5,783** |
-| **Balance** | **+$693** |
+| **HTF Outlays (Year 1 reformed)** | **$5,389** |
+| **Total Inflows (MOE at 5%, Year 2 rate)** | **$5,451** |
+| **Operating Balance** | **+$62** |
+| **HI Trust Fund opening reserves (§7(f))** | **+~$225** |
+| **Total Year 1 HTF Reserves** | **~$287** |
 
-**Funding mix (2026, billions):** UHAA payroll **$2,617**, Medicare HI payroll **$413**, Employer MOE **$998**, Medicare B/D **$750**, Medicaid MOE **$950**, Co‑pays **$55**.  
+**Funding mix (2026, billions):** UHAA payroll **$2,617**, Medicare HI payroll **$413**, Employer MOE **$665** *(5% rate — phases to $998 by Year 4)*, Medicare B/D **$750**, Medicaid MOE **$950**, Co‑pays **$55**.  
 See the **funding waterfall**: ![Waterfall](images/UHAA_funding_waterfall_2026.png)
 
-## Multi‑Year Path (core‑CPI caps)
-- With outlays growing at **Core CPI + 0.5pp** and payroll base at ~**4.5%**/yr, the model shows **ongoing annual surpluses**.  
-- 2026–2033 projection & lines chart available: ![Inflows vs Outlays](images/UHAA_projection_lines.png)
+> **Year 1 is lean by design.** Outlays of $5,389B reflect partial savings realization; Employer MOE at 5% ($665B) rather than the full 7.5% ($998B). This matches how every major federal health program launched — Medicare (1966) and Part D (2006) both started lean and grew into financial strength within 2–3 years. The HI Trust Fund transfer provides the opening buffer.
+
+## Multi‑Year Path (phased cost‑control caps)
+- Outlay growth: **Core CPI+2.5pp** (Years 1–2) stepping to **Core CPI+0.5pp** (Year 11+ long-run target) — consistent with France, Taiwan, and Canadian provincial precedent.
+- Employer MOE: 5.0% → 6.25% → 7.5% (Years 2–4), fully phased by Year 4.
+- Annual surpluses grow from **+$62B** (Year 1) to **+$886B** (Year 10). **10-year cumulative HTF surplus: ~$5.1T.**
+- 2026–2033 projection: ![Inflows vs Outlays](images/UHAA_projection_lines.png)
 
 ## Transition (Years 1–5)
 - **Year 1:** Stand up HTF & Portal; publish site‑neutral schedule; pilot hospital budgets.  
