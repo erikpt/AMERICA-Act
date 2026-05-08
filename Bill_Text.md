@@ -1,5 +1,5 @@
 
-# Revised Universal Healthcare Access Act of 2026 (UHAA) — Integrated Draft v3
+# AMERICA Act of 2026 — Integrated Draft v3
 *(Core‑CPI, Four‑Pillar Financing, National Health Budget & Capital Planning, Program Integrity/Equity, and Conforming Amendments)*
 
 ## A Bill to Establish a Hybrid Single-Payer Healthcare System in the United States
@@ -9,7 +9,7 @@
 ---
 
 ### SECTION 1. SHORT TITLE
-This Act may be cited as the **“Universal Healthcare Access Act of 2026” (UHAA).**
+This Act may be cited as the **“AMERICA Act of 2026”** (American Medical and Essential Rights to Inclusive Care Act).
 
 ---
 
@@ -130,7 +130,7 @@ Telemedicine services are reimbursed at **80%** of equivalent in‑person rates;
 #### (a) Four‑Pillar Financing (with SECA parity and anti‑avoidance).
 To align revenue with scope and ensure fiscal balance, the HTF is financed through the following consolidated pillars:
 
-1. **UHAA Payroll Contribution (W‑2).**  
+1. **AMERICA Act Payroll Contribution (W‑2).**  
    (A) **Employer portion (doubled).** Employer marginal rates:  
    • Up to $200,000 AGI: **9.33%** employer;  
    • $200,001–$500,000: **16%** employer;  
@@ -140,9 +140,9 @@ To align revenue with scope and ensure fiscal balance, the HTF is financed throu
    (C) Contributions apply to all wages and compensation with no upper cap.
 
 2. **Self‑Employed (SECA Parity) and Pass‑Through Anti‑Avoidance.**  
-   (A) **SECA mirror.** Self‑employment income is subject to **combined employer+employee UHAA rates equivalent to W‑2** at the applicable marginal brackets, with deductible employer‑equivalent portion as under SECA.  
-   (B) **Pass‑through avoidance.** HHS and Treasury shall issue rules to treat **reasonable compensation** for S‑corporation and partnership owners as wage‑like for UHAA contributions; schemes that convert labor income to distributions are disregarded.  
-   (C) **Non‑wage health contribution.** For AGI **above $400,000**, net investment income and pass‑through distributions are subject to a **1.0% UHAA non‑wage health contribution**, indexed to **Core CPI**, with de minimis exemptions under $25,000.
+   (A) **SECA mirror.** Self‑employment income is subject to **combined employer+employee AMERICA Act rates equivalent to W‑2** at the applicable marginal brackets, with deductible employer‑equivalent portion as under SECA.  
+   (B) **Pass‑through avoidance.** HHS and Treasury shall issue rules to treat **reasonable compensation** for S‑corporation and partnership owners as wage‑like for AMERICA Act contributions; schemes that convert labor income to distributions are disregarded.  
+   (C) **Non‑wage health contribution.** For AGI **above $400,000**, net investment income and pass‑through distributions are subject to a **1.0% AMERICA Act non‑wage health contribution**, indexed to **Core CPI**, with de minimis exemptions under $25,000.
 
 3. **Medicare Realignment.**  
    (A) The **Medicare Hospital Insurance (HI) payroll tax** and the **existing HI Trust Fund balance** are consolidated into the HTF.  
@@ -151,8 +151,8 @@ To align revenue with scope and ensure fiscal balance, the HTF is financed throu
 4. **Medicaid Maintenance of Effort (Medicaid MOE).** Federal and state Medicaid funding streams are **redirected** to the HTF on a maintenance‑of‑effort basis equal to pre‑Act levels, with state contributions indexed to **Core CPI** and adjusted for enrollment.
 
 5. **Employer Maintenance of Effort (Employer MOE) and Automation Dividend Health Contribution (ADHC).**  
-   (A) **Employer MOE.** Employers shall remit the **greater of**: (i) **7.5% of payroll**, or (ii) the employer’s **inflation‑adjusted** prior‑year spending on employee health benefits (premiums, HRA/HSA contributions, equivalently valued self‑insurance), net of employee contributions. Credits avoid double‑payment against employer UHAA payroll liability.  
-   (B) **ADHC (workforce displacement).** For any **Covered Workforce Displacement Event**—defined as layoffs or position eliminations **caused in material part** by **AI, automation, robotics, outsourcing, or offshoring**—the employer shall continue to remit the **employer‑portion of UHAA payroll contribution and Employer MOE** for each displaced worker for **5 years** after separation, based on the worker’s final‑year wage **indexed to Core CPI**, unless: (i) the employer certifies **insolvency or closure**; (ii) the worker attains **new coverage** via employment or self‑employment (credits apply); or (iii) the employer offers and the worker accepts **equivalent employment**. Small‑employer safe harbor may apply for employers with **<25 employees** (HHS/Treasury rule). Evasion via misclassification is prohibited and subject to penalties under Section 8.
+   (A) **Employer MOE.** Employers shall remit the **greater of**: (i) **7.5% of payroll**, or (ii) the employer’s **inflation‑adjusted** prior‑year spending on employee health benefits (premiums, HRA/HSA contributions, equivalently valued self‑insurance), net of employee contributions. Credits avoid double‑payment against employer AMERICA Act payroll liability.  
+   (B) **ADHC (workforce displacement).** For any **Covered Workforce Displacement Event**—defined as layoffs or position eliminations **caused in material part** by **AI, automation, robotics, outsourcing, or offshoring**—the employer shall continue to remit the **employer‑portion of AMERICA Act payroll contribution and Employer MOE** for each displaced worker for **5 years** after separation, based on the worker’s final‑year wage **indexed to Core CPI**, unless: (i) the employer certifies **insolvency or closure**; (ii) the worker attains **new coverage** via employment or self‑employment (credits apply); or (iii) the employer offers and the worker accepts **equivalent employment**. Small‑employer safe harbor may apply for employers with **<25 employees** (HHS/Treasury rule). Evasion via misclassification is prohibited and subject to penalties under Section 8.
 
 #### (b) Exclusivity; Anti‑duplication.
 Amounts redirected under this Section replace duplicative outlays for Essential Services under prior programs. No other federal agency may pay for Essential Services outside the HTF, except as authorized for VA, TRICARE, and IHS.
@@ -183,8 +183,8 @@ HTF administrative expenditures shall not exceed **7%** of total HTF outlays.
 
 #### (g) Sustainability Modeling and Triggers.
 1. HHS shall annually model five‑year revenues and outlays and **publish quarterly reserve metrics** for the HTF.  
-2. If projected deficits exceed **3%** of outlays, **automatic, temporary adjustments** shall increase UHAA payroll rates by up to **0.5 percentage points** across brackets and/or raise Employer MOE by up to **0.5 percentage points of payroll**, subject to a joint resolution of disapproval.  
-3. If cumulative reserves exceed **two months of outlays** for two consecutive years, the Secretary may **reduce** UHAA payroll rates or Employer MOE by up to **0.5 percentage points**, consistent with actuarial balance.
+2. If projected deficits exceed **3%** of outlays, **automatic, temporary adjustments** shall increase AMERICA Act payroll rates by up to **0.5 percentage points** across brackets and/or raise Employer MOE by up to **0.5 percentage points of payroll**, subject to a joint resolution of disapproval.  
+3. If cumulative reserves exceed **two months of outlays** for two consecutive years, the Secretary may **reduce** AMERICA Act payroll rates or Employer MOE by up to **0.5 percentage points**, consistent with actuarial balance.
 4. **Transition Reserve Floor.** During Plan Years 1 through 5, HTF operating reserves shall not fall below **one month of projected outlays**. Breach of this floor shall immediately trigger the automatic adjusters in paragraph (2) without waiting for the projected-deficit threshold, and the Secretary shall notify Congress within 5 business days. Monthly reserve levels shall be published on the NHP during Plan Years 1 through 3; weekly if reserves fall below the one-month floor.
 
 #### (h) Pharmaceutical Pricing.
@@ -395,7 +395,7 @@ This Act takes effect **180 days** after enactment. Funding mechanisms and co‑
 **(b) Efficiency Targets.** If administration exceeds **7%** of outlays or average reimbursement delays exceed **30 days**, HHS must submit a corrective plan within **90 days**.  
 **(c) Price Transparency.** Participating providers must publish machine‑readable HTF reimbursement rates; non‑compliance may incur penalties up to **$100,000/day**.  
 **(d) Integration with Section 5.** This Section consolidates financial reporting and transparency requirements and shall be read in pari materia with Section 5’s triggers, caps, and indexation to **Core CPI**.  
-**(e) Phase Gate Adjustment.** If the certifications in Section 7(a)(5) are not met, the relevant phase is **delayed 12 months** and HHS shall propose **temporary adjustments** under **Section 5(g)(2)** (≤0.5 percentage points to UHAA payroll and/or Employer MOE) to achieve actuarial balance; Congress may disapprove by joint resolution.
+**(e) Phase Gate Adjustment.** If the certifications in Section 7(a)(5) are not met, the relevant phase is **delayed 12 months** and HHS shall propose **temporary adjustments** under **Section 5(g)(2)** (≤0.5 percentage points to AMERICA Act payroll and/or Employer MOE) to achieve actuarial balance; Congress may disapprove by joint resolution.
 
 ---
 

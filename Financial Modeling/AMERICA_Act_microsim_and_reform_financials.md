@@ -26,7 +26,7 @@ Assumptions: ~130M tax units; AGI distribution {60%,30%,8%,2%} with average AGIs
 
 > **vs. prior model:** Balance was +$693B assuming Day 1 savings and full MOE from Year 1. The corrected +$62B operating balance reflects (a) partial savings realization and (b) Employer MOE phased in at 5% per the bill's own transition timeline. The HI Trust Fund transfer provides the reserve buffer that makes Year 1 operations viable. This matches how Medicare (1966) and Part D (2006) both launched with thin initial operating margins supported by opening reserves or appropriations.
 
-![Inflows vs Outlays Chart](./images/UHAA_reform_inflows_outflows.png)
+![Inflows vs Outlays Chart](./images/AMERICA Act_reform_inflows_outflows.png)
 
 ### Range with employee rate at 5% and 9.5% (Year 1, MOE at 5%)
 - **Inflows (employee 5%): ~$5,185B** → Year 1 Balance **~-$204B** *(HI Trust Fund reserves provide cover)*

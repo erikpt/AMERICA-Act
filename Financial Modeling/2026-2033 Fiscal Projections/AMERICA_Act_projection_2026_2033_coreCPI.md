@@ -1,4 +1,4 @@
-# UHAA Multi‑Year Projection (2026–2033) — Phased Cost Control + MOE Phase‑In
+# AMERICA Act Multi‑Year Projection (2026–2033) — Phased Cost Control + MOE Phase‑In
 
 **Outlay growth cap (phased, per Section 5(d)(1)):**
 - Plan Years 1–2 (2026–2027): Core CPI + 2.5 pp (~4.7%/yr) — transition and infrastructure build

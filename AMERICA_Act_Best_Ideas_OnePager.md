@@ -1,14 +1,14 @@
-# UHAA: The Best Ideas From Around the World
+# AMERICA Act: The Best Ideas From Around the World
 *A practical blend of proven reforms from France, Canada, Portugal — and other high‑performers — adapted for the U.S.*
 
 ## Why this approach
-Instead of reinventing the wheel, UHAA borrows and adapts the most effective global tools for **access, disciplined costs, and operational simplicity**—while preserving U.S. choice of provider and our income‑based co‑pays.
+Instead of reinventing the wheel, AMERICA Act borrows and adapts the most effective global tools for **access, disciplined costs, and operational simplicity**—while preserving U.S. choice of provider and our income‑based co‑pays.
 
 ---
 
-## What we borrowed — and how UHAA uses it
+## What we borrowed — and how AMERICA Act uses it
 
-| Global idea | Where it works | What UHAA does | Why it matters |
+| Global idea | Where it works | What AMERICA Act does | Why it matters |
 |---|---|---|---|
 | **Five Principles of Coverage** (public administration, comprehensiveness, universality, portability, accessibility) | **Canada** | Adds a statutory **Guiding Principles** clause and requires **HHS/MAC** to certify rulemaking against them. | Anchors program ethos and guards against policy drift; helps defend rules in court. |
 | **National Health Budget with Sector Targets (ONDAM)** | **France** | Annual **National Health Budget** with **sub‑targets** for Hospital, Ambulatory/Primary Care, LTSS, and Rx/Devices; **mid‑year corrections** allowed. | Keeps total spend inside a transparent target; lets HHS adjust early before overruns. |

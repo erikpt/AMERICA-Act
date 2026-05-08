@@ -1,4 +1,4 @@
-# UHAA — Staff-Level Budget Scoring (Illustrative), 2026–2035
+# AMERICA Act — Staff-Level Budget Scoring (Illustrative), 2026–2035
 > Transparent model using phased cost controls and corrected Employer MOE phase-in. Two views: **(A) HTF finances**, **(B) Federal budget impact vs. baseline**. Figures in **billions**; 10-year totals shown. Not an official CBO score.
 >
 > **Key assumptions:**
@@ -26,12 +26,12 @@
 | 2035 | $8,251B | $7,365B | $886B | $5,141B |
 
 ## B) Federal Budget Impact (vs. Baseline Medicare + Medicaid + ACA)
-- **10-year baseline federal health outlays (no UHAA):** $29,004B
-- **10-year UHAA receipts (payroll + employer MOE + HI + copays):** $49,594B
-- **10-year UHAA outlays (HTF):** $63,854B
-- **10-year net federal fiscal improvement (UHAA vs baseline):** **$14,744B**
+- **10-year baseline federal health outlays (no AMERICA Act):** $29,004B
+- **10-year AMERICA Act receipts (payroll + employer MOE + HI + copays):** $49,594B
+- **10-year AMERICA Act outlays (HTF):** $63,854B
+- **10-year net federal fiscal improvement (AMERICA Act vs baseline):** **$14,744B**
 
-| Year | UHAA Receipts | UHAA Outlays | Baseline Fed Outlays | **Δ Surplus (UHAA – Baseline)** | **Cumulative Δ** |
+| Year | AMERICA Act Receipts | AMERICA Act Outlays | Baseline Fed Outlays | **Δ Surplus (AMERICA Act – Baseline)** | **Cumulative Δ** |
 |---:|---:|---:|---:|---:|---:|
 | 2026 | $3,751B | $5,389B | $2,306B | $668B | $668B |
 | 2027 | $4,092B | $5,642B | $2,421B | $871B | $1,539B |
@@ -45,9 +45,9 @@
 | 2035 | $6,052B | $7,365B | $3,577B | $2,264B | $14,746B |
 
 ### Notes & Accounting Conventions
-- **Receipts (budget view):** UHAA payroll (employee + employer), Employer MOE (at phased rates), Medicare HI payroll, co-pays. Excludes Medicaid MOE and Medicare B/D redirections (existing federal outlays reclassified, not new revenue).
-- **Δ Surplus** = UHAA Receipts + Baseline Fed Outlays eliminated − UHAA Outlays. Positive = federal government's net health position improves vs. status quo by that amount.
+- **Receipts (budget view):** AMERICA Act payroll (employee + employer), Employer MOE (at phased rates), Medicare HI payroll, co-pays. Excludes Medicaid MOE and Medicare B/D redirections (existing federal outlays reclassified, not new revenue).
+- **Δ Surplus** = AMERICA Act Receipts + Baseline Fed Outlays eliminated − AMERICA Act Outlays. Positive = federal government's net health position improves vs. status quo by that amount.
 - **HI Trust Fund opening balance** (~$225B) counted as initial HTF reserves, not annual flow. Adds ~0.5 months of buffer to Year 1 reserve adequacy.
-- **Baseline** includes Medicare, Medicaid, ACA subsidies growing at 5%/yr; VA/TRICARE/IHS remain outside UHAA.
+- **Baseline** includes Medicare, Medicaid, ACA subsidies growing at 5%/yr; VA/TRICARE/IHS remain outside AMERICA Act.
 - **Static, not dynamic** — no macro feedbacks. Classification could vary under formal CBO scoring.
 - **Model history:** Original (all savings Day 1, flat CPI+0.5pp, full MOE Year 1) showed 10-yr surplus $11.4T and federal improvement $21.0T. Current model applies three corrections: phased outlay growth cap, phased reform savings, and corrected MOE phase-in. Each correction improves credibility at the cost of headline surplus size. The system remains solvent throughout all 10 years.
