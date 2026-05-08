@@ -1,7 +1,9 @@
-# UniversalHealthAccessAct
-We’re building this project in the open to craft people-centered legislation for a hybrid single-payer health care system in the United States. By combining policy expertise, real-world experience, and collaborative problem solving, we can design an approach that protects essential care for everyone while welcoming supplemental innovation.
+# AMERICA Act
+### American Medical and Essential Rights to Inclusive Care Act
 
-Our mission is to convene patients, clinicians, researchers, technologists, advocates, and public servants to shape a framework that is inclusive, sustainable, and ready for legislative consideration. Whether you bring personal stories, data-driven insights, or drafting skills, your contribution helps refine the AMERICA Act.
+Open-source model legislation for a hybrid single-payer healthcare system in the United States. We're building this in the open — combining policy expertise, lived experience, and collaborative problem-solving to craft a framework that guarantees essential care for every American while preserving supplemental innovation.
+
+Our mission is to convene patients, clinicians, researchers, technologists, advocates, and public servants to shape legislation that is inclusive, sustainable, and ready for congressional consideration. Whether you bring personal stories, data-driven insights, or drafting skills, your contribution helps strengthen the AMERICA Act.
 
 Explore the current working draft of the bill [here](Bill_Text.md), then share feedback, propose amendments, or suggest new ideas that advance the goal of equitable health care access.
 
@@ -45,7 +47,7 @@ Administration rests with **HHS**, with strong guardrails against unilateral exe
 * **Pharmacy**: Generics prioritized; national **cost-plus (+15%)** negotiation; no donut holes or phase gaps; drug OOP counted toward 5% AGI cap.
 * **States**: Regional coordination, optional waivers, and Medicaid/ACA fund realignment; state portals interoperable with national standards.
 * **Economy**: Consolidation reduces administrative waste; portability improves labor mobility; small-business formation facilitated by decoupling insurance from employment.
-* **Governance**: MAC lottery depoliticizes benefits; HHS “handcuffing” provision; automatic injunction against executive interference; robust OIG/GAO/CBO oversight.
+* **Governance**: MAC lottery depoliticizes benefits; HHS "handcuffing" provision; automatic injunction against executive interference; robust OIG/GAO/CBO oversight.
 * **Security & Privacy**: NIST-aligned cybersecurity; 24-hour breach notifications; patient-owned records with opt-in data sharing; AI bias/accuracy audits.
 * **Resilience & Innovation**: 2% surge fund for emergencies; 1% innovation fund; five-year GAO reviews with adaptive budgeting.
 
