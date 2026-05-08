@@ -1,4 +1,4 @@
-# Universal Healthcare Access Act
+# AMERICA Act
 ## Your healthcare. Guaranteed.
 
 No networks. No denials. No coverage gaps. Essential care for every American — no matter your job, income, or health history.

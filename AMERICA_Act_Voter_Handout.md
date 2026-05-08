@@ -1,11 +1,11 @@
-# Universal Healthcare Access Act
+# AMERICA Act
 ### What it means for you and your family
 
 ---
 
 ## The basics
 
-The Universal Healthcare Access Act guarantees essential healthcare for every U.S. citizen and legal resident. One national program pays for essential care. Your doctor gets paid. You get care. No insurance company in the middle deciding what's covered.
+The AMERICA Act guarantees essential healthcare for every U.S. citizen and legal resident. One national program pays for essential care. Your doctor gets paid. You get care. No insurance company in the middle deciding what's covered.
 
 This is not a government takeover of hospitals or doctors. Providers stay private. You choose who you see. The only thing that changes is who pays the bill — and how much you owe.
 

@@ -1,4 +1,4 @@
-# UHAA Fiscal Appendix — Back-of-the-Envelope (Revised Model, 2026)
+# AMERICA Act Fiscal Appendix — Back-of-the-Envelope (Revised Model, 2026)
 
 > **Scope:** 2026 Year 1 snapshot with phased cost-control indexation for forward growth. Figures in **billions**.
 > **Key revision:** Reform savings phase in over 5 years (not Day 1). Year 1 reflects ~$130B of the eventual $430B/yr in savings — consistent with international evidence on single-payer transition timelines (Canada, Taiwan, France). Full savings reached by Plan Year 5 per Section 7(a)(6) milestones.
@@ -26,7 +26,7 @@
 ## Inflow Construction (Central Case; Employee = 7%)
 | Component | Amount | Note |
 |---|---:|---|
-| UHAA payroll (employer doubled + employee 7%) | $2,617B | Full rate from Year 2 (first operational year) |
+| AMERICA Act payroll (employer doubled + employee 7%) | $2,617B | Full rate from Year 2 (first operational year) |
 | Medicare HI payroll (rolled into HTF) | $413B | |
 | Employer MOE (**5.0% of payroll**, Year 2 rate) | $665B | Phases to 6.25% Year 3, 7.5% Year 4+ per §7(a) |
 | Medicare Parts B/D (general revenue redirection) | $750B | |
@@ -46,7 +46,7 @@
 ## Funding Waterfall — 2026 Central Case
 The chart shows how each inflow component stacks up against total Year 1 reformed outlays.
 
-![Funding Waterfall](./images/UHAA_funding_waterfall_2026.png)
+![Funding Waterfall](./images/AMERICA Act_funding_waterfall_2026.png)
 
 ---
 **Notes:**
