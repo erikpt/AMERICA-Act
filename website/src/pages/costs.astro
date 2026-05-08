@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CoPayChart from '../components/CoPayChart.astro';
+import FundingChart from '../components/FundingChart.astro';
+import SurplusChart from '../components/SurplusChart.astro';
+---
+
+<BaseLayout
+  title="What You Pay"
+  description="Co-pays are income-based with a hard 5% of AGI annual cap. See how the program is funded and its 10-year fiscal trajectory."
+>
+
+  <!-- Header -->
+  <section class="bg-navy text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">What you pay</h1>
+      <p class="text-blue-200 text-lg max-w-2xl leading-relaxed">
+        Co-pays scale with your income — not a flat fee that hits lower-income families hardest.
+        And there's a hard annual cap. No matter how much care you need in a year,
+        you will never pay more than 5% of your adjusted gross income.
+      </p>
+    </div>
+  </section>
+
+  <!-- Full co-pay table + chart -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-8">Co-pay schedule</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-navy text-white text-left text-xs uppercase tracking-wide">
+                <th class="px-3 py-3 rounded-tl-lg font-semibold">Income</th>
+                <th class="px-3 py-3 font-semibold">Primary</th>
+                <th class="px-3 py-3 font-semibold">Specialist</th>
+                <th class="px-3 py-3 font-semibold">ER</th>
+                <th class="px-3 py-3 rounded-tr-lg font-semibold">Rx</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="bg-teal/5">
+                <td class="px-3 py-3 font-semibold text-navy">Under $75k</td>
+                <td class="px-3 py-3 text-teal font-bold">$0</td>
+                <td class="px-3 py-3">$25</td>
+                <td class="px-3 py-3">$50</td>
+                <td class="px-3 py-3">$10</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-3 font-semibold text-navy">$75k – $200k</td>
+                <td class="px-3 py-3">$20</td>
+                <td class="px-3 py-3">$50</td>
+                <td class="px-3 py-3">$100</td>
+                <td class="px-3 py-3">$20</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-3 py-3 font-semibold text-navy">$200k – $500k</td>
+                <td class="px-3 py-3">$40</td>
+                <td class="px-3 py-3">$100</td>
+                <td class="px-3 py-3">$200</td>
+                <td class="px-3 py-3">$40</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-3 font-semibold text-navy">Over $500k</td>
+                <td class="px-3 py-3">$60</td>
+                <td class="px-3 py-3">$150</td>
+                <td class="px-3 py-3">$300</td>
+                <td class="px-3 py-3">$60</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mt-4 bg-teal/5 border border-teal/20 rounded-lg p-4">
+            <p class="text-sm font-semibold text-navy mb-1">Annual out-of-pocket cap: 5% of your AGI</p>
+            <p class="text-xs text-gray-500">
+              Once you hit the cap, additional co-pays are automatically refunded through the National Health Portal.
+              Drug co-pays count toward the cap. Preventive care, vaccines, and children's wellness visits are always $0.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <CoPayChart />
+          <p class="text-xs text-gray-400 mt-3 text-center">Co-pay per visit by income tier. Preventive care excluded (always $0).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it's funded -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-3">How it's paid for</h2>
+      <p class="text-gray-600 mb-10 max-w-2xl leading-relaxed">
+        The U.S. already spends more on healthcare per person than any country on Earth —
+        including countries that cover everyone. Most of that money currently passes through
+        insurance companies, billing departments, and administrative overhead. This act
+        redirects existing spending and adds a new payroll contribution shared by workers and employers.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <FundingChart />
+          <p class="text-xs text-gray-400 mt-3 text-center">Year 1 HTF inflows (~$5.45 trillion total). Employer MOE phases to 7.5% by Year 4.</p>
+        </div>
+
+        <div class="space-y-4">
+          {[
+            {
+              label: 'UHAA Payroll',
+              amount: '~$3.0T',
+              color: 'bg-navy',
+              detail: 'Progressive payroll contributions from workers and employers, no income cap. Workers below the poverty line pay nothing.',
+            },
+            {
+              label: 'Medicaid Realignment',
+              amount: '~$950B',
+              color: 'bg-teal',
+              detail: 'Federal and state Medicaid funds redirected to the HTF under Maintenance of Effort provisions.',
+            },
+            {
+              label: 'Medicare Realignment',
+              amount: '~$750B',
+              color: 'bg-navy-light',
+              detail: 'Medicare Parts B and D general revenues, plus HI Trust Fund opening reserves (~$225B).',
+            },
+            {
+              label: 'Employer MOE',
+              amount: '~$665B',
+              color: 'bg-gold',
+              detail: 'Employers contribute what they were already spending on premiums. Phases to 7.5% of payroll by Year 4.',
+            },
+          ].map(({ label, amount, color, detail }) => (
+            <div class="flex items-start gap-4">
+              <div class={`w-3 h-3 rounded-full ${color} mt-1.5 flex-shrink-0`}></div>
+              <div>
+                <div class="flex items-baseline gap-2">
+                  <span class="font-semibold text-gray-800">{label}</span>
+                  <span class="text-sm font-bold text-navy">{amount}/yr</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-0.5">{detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10-year surplus trajectory -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-3">10-year fiscal trajectory</h2>
+      <p class="text-gray-600 mb-10 max-w-2xl leading-relaxed">
+        The program launches with a lean but positive Year 1 operating surplus (~$62B),
+        supported by the HI Trust Fund opening transfer (~$225B in reserves).
+        As employer contributions phase to full rate, administrative savings materialize,
+        and the growth cap steps down, annual surpluses grow to nearly $900B by 2035 —
+        with a 10-year cumulative HTF surplus of ~$5.1 trillion.
+      </p>
+
+      <SurplusChart />
+      <p class="text-xs text-gray-400 mt-3 text-center">
+        Annual HTF operating surplus 2026–2035. Based on phased cost-control assumptions (Core CPI + 2.5pp → 0.5pp).
+        Employee payroll rate 7%. Full methodology in the <a href="https://github.com/erikpt/UniversalHealthAccessAct/blob/main/Financial%20Modeling/Staff%20Budget%20Scoring/UHAA_Staff_Budget_Scoring_2026_2035.md" class="text-teal underline" target="_blank" rel="noopener">staff budget scoring document</a>.
+      </p>
+
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {[
+          { label: 'Year 1 surplus', value: '$62B' },
+          { label: 'Year 3 surplus', value: '$405B' },
+          { label: 'Year 5 surplus', value: '$477B' },
+          { label: '10-year cumulative', value: '$5.1T' },
+        ].map(({ label, value }) => (
+          <div class="bg-teal/5 border border-teal/20 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold text-teal">{value}</div>
+            <div class="text-xs text-gray-500 mt-1">{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Administrative overhead guarantee -->
+  <section class="py-16 px-4 bg-navy text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Built-in guardrails against waste</h2>
+      <p class="text-blue-200 mb-8 max-w-xl mx-auto leading-relaxed">
+        Administrative overhead is capped by law at 7% of HTF expenditures.
+        If costs exceed that, automatic corrective mechanisms trigger — no Congressional action required.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {[
+          { stat: '≤ 7%', label: 'Administrative overhead cap, enforced by statute' },
+          { stat: '$430B/yr', label: 'Projected annual savings from administrative simplification by Year 5' },
+          { stat: '10-year', label: 'CBO reviews required; GAO oversight every 5 years' },
+        ].map(({ stat, label }) => (
+          <div class="bg-navy-light/30 rounded-xl p-6">
+            <div class="text-3xl font-bold text-teal mb-2">{stat}</div>
+            <div class="text-sm text-blue-200">{label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

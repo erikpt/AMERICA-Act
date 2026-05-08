@@ -7,10 +7,11 @@
 ## 2026 Snapshot (billions)
 |  | **UHAA (Reformed)** | Notes |
 |---|---:|---|
-| **HTF Outlays (essential services)** | **$5,089** | Site‑neutral payments, global hospital budgets, expanded drug negotiation already applied |
-| **Inflows (central case, employee 7%)** | **$5,783** | UHAA payroll (doubled employer + 7% employee), Medicare HI+Parts B/D, Medicaid MOE, Employer MOE, co‑pays |
-| **Annual Balance** | **+$693** | Flows exceed outlays → builds reserves / room for rate relief |
-| **Indexation** | **Core CPI** | Payment caps and thresholds indexed to core CPI; hospital budgets capped at **Core CPI + 0.5pp** |
+| **HTF Outlays (essential services)** | **$5,389** | Year 1 reflects partial reform savings (~$130B of $430B eventual); full savings by Year 5 |
+| **Inflows (central case, MOE at 5%)** | **$5,451** | UHAA payroll + Medicare HI + Employer MOE at Year 2 rate (5%) + Medicare B/D + Medicaid MOE + co‑pays |
+| **Operating Balance** | **+$62** | Lean but positive; HI Trust Fund transfer (+~$225B) brings total Year 1 reserves to ~$287B |
+| **HI Trust Fund opening reserves** | **~$225B** | One-time balance-sheet transfer per §7(f); not an annual flow |
+| **Indexation** | **Phased Core CPI cap** | CPI+2.5pp Years 1–2; CPI+1.5pp Years 3–5; CPI+1.0pp Years 6–10; CPI+0.5pp Year 11+ |
 
 *See funding waterfall:* ![Waterfall](./images/UHAA_funding_waterfall_2026.png)
 

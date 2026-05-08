@@ -1,0 +1,111 @@
+---
+const steps = [
+  {
+    year: 'Year 1',
+    label: 'Day One',
+    color: 'bg-teal',
+    items: [
+      'Universal eligibility begins',
+      'HTF established, MAC seated',
+      'Fraud-tech and portal buildout',
+      'Provider enrollment opens',
+    ],
+  },
+  {
+    year: 'Year 2',
+    label: 'Transition',
+    color: 'bg-navy-light',
+    items: [
+      'Employer MOE begins (5%)',
+      'Mental health parity enforced',
+      'Reform savings milestone 1',
+      'State coordination offices open',
+    ],
+  },
+  {
+    year: 'Year 3',
+    label: 'Expansion',
+    color: 'bg-navy',
+    items: [
+      'Dental & vision fully included',
+      'Global hospital budgets begin',
+      'Employer MOE rises to 6.25%',
+      'CBO Year 3 program review',
+    ],
+  },
+  {
+    year: 'Year 4',
+    label: 'Maturing',
+    color: 'bg-navy-dark',
+    items: [
+      'Employer MOE at full 7.5%',
+      'Private essential coverage winds down',
+      'Full drug price controls active',
+      'Reform savings milestone 2',
+    ],
+  },
+  {
+    year: 'Year 5',
+    label: 'Full Coverage',
+    color: 'bg-teal',
+    items: [
+      'Private essential coverage fully phased out',
+      'ERISA health benefit sunset',
+      'All reform savings realized ($430B/yr)',
+      'First 5-year GAO review',
+    ],
+  },
+];
+---
+
+<div class="relative">
+  <!-- Desktop: horizontal timeline -->
+  <div class="hidden md:block">
+    <div class="flex items-start gap-0 relative">
+      <!-- Connecting line -->
+      <div class="absolute top-5 left-0 right-0 h-0.5 bg-gray-200 z-0" style="margin: 0 2.5rem;"></div>
+
+      {steps.map((step, i) => (
+        <div class="flex-1 flex flex-col items-center relative z-10 px-2">
+          <!-- Dot -->
+          <div class={`w-10 h-10 rounded-full ${step.color} flex items-center justify-center text-white font-bold text-xs shadow`}>
+            {i + 1}
+          </div>
+          <!-- Year label -->
+          <div class={`mt-2 text-xs font-bold uppercase tracking-wide text-center ${step.color === 'bg-teal' ? 'text-teal' : 'text-navy'}`}>
+            {step.year}
+          </div>
+          <div class="text-xs text-gray-500 font-medium mb-3 text-center">{step.label}</div>
+          <!-- Items -->
+          <ul class="space-y-1.5 text-xs text-gray-600 text-center">
+            {step.items.map((item) => (
+              <li class="leading-tight">{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Mobile: vertical timeline -->
+  <div class="md:hidden space-y-6">
+    {steps.map((step, i) => (
+      <div class="flex gap-4">
+        <div class="flex flex-col items-center">
+          <div class={`w-9 h-9 rounded-full ${step.color} flex items-center justify-center text-white font-bold text-xs shadow flex-shrink-0`}>
+            {i + 1}
+          </div>
+          {i < steps.length - 1 && <div class="flex-1 w-0.5 bg-gray-200 mt-1"></div>}
+        </div>
+        <div class="pb-4">
+          <div class="text-xs font-bold uppercase tracking-wide text-navy">{step.year} — {step.label}</div>
+          <ul class="mt-1.5 space-y-1 text-sm text-gray-600">
+            {step.items.map((item) => (
+              <li class="before:content-['·'] before:mr-1.5 before:text-teal">{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

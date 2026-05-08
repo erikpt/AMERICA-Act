@@ -1,0 +1,81 @@
+---
+// Co-pay amounts per income tier for primary care, specialist, ER
+// Data from Bill Section 4(d) co-pay schedule
+---
+
+<div class="relative" style="height: 360px;">
+  <canvas id="copay-chart" aria-label="Co-pay amounts by income tier" role="img"></canvas>
+</div>
+
+<script>
+  import Chart from 'chart.js/auto';
+
+  const canvas = document.getElementById('copay-chart') as HTMLCanvasElement;
+
+  new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: ['Under $75k', '$75k – $200k', '$200k – $500k', 'Over $500k'],
+      datasets: [
+        {
+          label: 'Primary Care',
+          data: [0, 20, 40, 60],
+          backgroundColor: '#2A9D8F',
+          borderRadius: 4,
+        },
+        {
+          label: 'Specialist',
+          data: [25, 50, 100, 150],
+          backgroundColor: '#1B3A6B',
+          borderRadius: 4,
+        },
+        {
+          label: 'Emergency Room',
+          data: [50, 100, 200, 300],
+          backgroundColor: '#E9C46A',
+          borderRadius: 4,
+        },
+        {
+          label: 'Prescription',
+          data: [10, 20, 40, 60],
+          backgroundColor: '#6B7280',
+          borderRadius: 4,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { family: 'Inter', size: 12 }, padding: 16 },
+        },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => ` ${ctx.dataset.label}: $${ctx.parsed.y}`,
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: { family: 'Inter', size: 12 } },
+        },
+        y: {
+          grid: { color: '#F3F4F6' },
+          ticks: {
+            font: { family: 'Inter', size: 12 },
+            callback: (val) => `$${val}`,
+          },
+          title: {
+            display: true,
+            text: 'Co-pay per visit ($)',
+            font: { family: 'Inter', size: 12 },
+            color: '#6B7280',
+          },
+        },
+      },
+    },
+  });
+</script>

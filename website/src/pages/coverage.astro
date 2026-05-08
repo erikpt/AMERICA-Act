@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const coverageItems = [
+  {
+    category: 'Primary & Preventive',
+    icon: '🩺',
+    services: [
+      'Primary care visits',
+      'Annual wellness exams',
+      'Preventive screenings (always $0)',
+      'Vaccinations and immunizations (always $0)',
+      'Lab work and diagnostics',
+    ],
+  },
+  {
+    category: 'Specialist & Hospital',
+    icon: '🏥',
+    services: [
+      'Specialist consultations',
+      'Emergency room and urgent care',
+      'Inpatient and outpatient hospital care',
+      'Surgery and anesthesia',
+      'Physical and occupational therapy',
+    ],
+  },
+  {
+    category: 'Mental Health',
+    icon: '🧠',
+    services: [
+      'Therapy and psychiatry — same access as any other care',
+      'Substance use treatment and detox',
+      'Inpatient behavioral health',
+      'Crisis intervention services',
+      'Telehealth mental health visits',
+    ],
+  },
+  {
+    category: 'Prescription Drugs',
+    icon: '💊',
+    services: [
+      'Generic and brand-name prescriptions',
+      'No coverage gaps or donut holes',
+      'National cost-plus pricing (cost + 15%)',
+      'Drug costs count toward your 5% AGI annual cap',
+      'Specialty drugs including biologics',
+    ],
+  },
+  {
+    category: 'Dental & Vision',
+    icon: '👁️',
+    services: [
+      'Preventive cleanings and exams',
+      'Fillings and medically necessary dental work',
+      'Dentures and orthodontics (medically necessary)',
+      'Eye exams and prescription glasses',
+      'Hearing exams and hearing aids',
+    ],
+  },
+  {
+    category: 'Maternity & Reproductive',
+    icon: '🤱',
+    services: [
+      'Prenatal and postnatal care',
+      'Labor and delivery',
+      'Reproductive health services',
+      'Fertility counseling',
+      'Newborn care',
+    ],
+  },
+  {
+    category: 'Long-Term & Home Care',
+    icon: '🏠',
+    services: [
+      'Home health aide services',
+      'Skilled nursing facility care',
+      'Hospice and palliative care',
+      'Durable medical equipment',
+      'Chronic disease management',
+    ],
+  },
+  {
+    category: 'Telehealth',
+    icon: '💻',
+    services: [
+      'Video and phone visits reimbursed at 80% of in-person rate',
+      'Same co-pay as equivalent in-person visit',
+      'Available for most primary and specialty care',
+      'No additional setup fees',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="What's Covered"
+  description="Essential care includes primary care, mental health, dental, vision, prescriptions, maternity, and more — built in from day one."
+>
+
+  <!-- Page header -->
+  <section class="bg-navy text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">What's covered</h1>
+      <p class="text-blue-200 text-lg max-w-2xl leading-relaxed">
+        Essential care covers what you'd expect — and some things you might not have today.
+        Mental health, dental, vision, hearing, and prescription drugs are built in from day one —
+        not add-ons, not extras.
+      </p>
+    </div>
+  </section>
+
+  <!-- Coverage grid -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      {coverageItems.map(({ category, icon, services }) => (
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">{icon}</span>
+            <h2 class="text-lg font-semibold text-navy">{category}</h2>
+          </div>
+          <ul class="space-y-2">
+            {services.map((service) => (
+              <li class="flex items-start gap-2 text-sm text-gray-600">
+                <svg class="w-4 h-4 text-teal mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- What's not covered -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-bold text-navy mb-4">What's not in the essential benefit</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          The HTF covers essential care. A few categories remain optional or supplemental:
+        </p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          {[
+            'Luxury hospital accommodations (private suite upgrades)',
+            'Elective cosmetic procedures',
+            'Non-medically-necessary dental upgrades (e.g., veneers)',
+            'Experimental treatments not yet MAC-approved',
+          ].map((item) => (
+            <li class="flex items-start gap-2">
+              <span class="text-gold font-bold mt-0.5">–</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="text-sm text-gray-500 mt-4">
+          Private supplemental insurance can cover these extras. HSAs remain available for co-pays and
+          non-essential services.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-navy mb-4">What stays unchanged</h2>
+        <ul class="space-y-3 text-sm text-gray-600">
+          {[
+            { title: 'VA and TRICARE', body: 'Continue as-is. Eligible beneficiaries may choose to use UHAA instead — nobody is forced to switch.' },
+            { title: 'Indian Health Service', body: 'IHS continues. Tribal members may elect UHAA coverage for expanded access.' },
+            { title: 'HSAs', body: 'Health Savings Accounts are preserved for co-pays, non-essential services, and supplemental coverage.' },
+            { title: 'Private supplemental plans', body: 'Insurers can offer plans covering extras, upgrades, and elective services.' },
+          ].map(({ title, body }) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-navy-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span><strong class="text-gray-800">{title}:</strong> {body}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rights -->
+  <section class="py-16 px-4 bg-navy text-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-center">Your rights under this law</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { right: 'No prior authorization', detail: 'Your doctor decides what you need — not an insurance company.' },
+          { right: 'No balance billing', detail: 'What the program pays plus your co-pay is the full bill. Providers cannot charge more.' },
+          { right: 'Free choice of provider', detail: 'Any licensed provider nationwide. No networks, no gatekeepers.' },
+          { right: 'No denials of covered care', detail: 'Violations carry penalties up to $100,000 per incident.' },
+          { right: 'Coverage continuity', detail: 'Active treatment (cancer, pregnancy, dialysis) continues uninterrupted for at least 12 months during transition.' },
+          { right: 'Hardship waivers', detail: 'If co-pays would cause financial hardship, IRS-verified waivers are available.' },
+        ].map(({ right, detail }) => (
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full bg-teal flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">{right}</div>
+              <div class="text-blue-200 text-sm mt-0.5">{detail}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

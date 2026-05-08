@@ -1,0 +1,71 @@
+---
+// Annual HTF operating surplus 2026–2035 (billions)
+// From Financial Modeling/Staff Budget Scoring/UHAA_staff_HTF_2026_2035.csv
+---
+
+<div class="relative" style="height: 360px;">
+  <canvas id="surplus-chart" aria-label="HTF 10-year annual operating surplus trajectory" role="img"></canvas>
+</div>
+
+<script>
+  import Chart from 'chart.js/auto';
+
+  const canvas = document.getElementById('surplus-chart') as HTMLCanvasElement;
+
+  const years = ['2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035'];
+  const surpluses = [61.5, 198.7, 405.1, 439.9, 477.2, 548.4, 624.6, 705.9, 796.0, 885.5];
+
+  new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [
+        {
+          label: 'Annual HTF Surplus ($B)',
+          data: surpluses,
+          borderColor: '#2A9D8F',
+          backgroundColor: 'rgba(42, 157, 143, 0.12)',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#2A9D8F',
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          fill: true,
+          tension: 0.3,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => ` $${ctx.parsed.y.toFixed(1)}B operating surplus`,
+          },
+        },
+        // Annotation-free; the zero-line logic is handled by scale min
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: { family: 'Inter', size: 12 } },
+        },
+        y: {
+          min: 0,
+          grid: { color: '#F3F4F6' },
+          ticks: {
+            font: { family: 'Inter', size: 12 },
+            callback: (val) => `$${val}B`,
+          },
+          title: {
+            display: true,
+            text: 'Annual surplus ($B)',
+            font: { family: 'Inter', size: 12 },
+            color: '#6B7280',
+          },
+        },
+      },
+    },
+  });
+</script>

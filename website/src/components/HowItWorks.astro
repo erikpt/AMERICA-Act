@@ -1,0 +1,72 @@
+---
+---
+
+<!-- Hub-and-spoke flow: contributions → HTF → care -->
+<div class="py-8">
+  <!-- Mobile: vertical stack. Desktop: hub diagram -->
+  <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
+
+    <!-- Left: Funding sources -->
+    <div class="flex flex-col gap-3 lg:text-right">
+      {[
+        { icon: '👷', label: 'Worker payroll contribution' },
+        { icon: '🏢', label: 'Employer contribution' },
+        { icon: '🏛️', label: 'Medicare & Medicaid realignment' },
+      ].map(({ icon, label }) => (
+        <div class="flex lg:flex-row-reverse items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-navy-light/10 flex items-center justify-center text-xl flex-shrink-0">{icon}</div>
+          <span class="text-sm font-medium text-gray-700">{label}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Arrows pointing right (desktop) / down (mobile) -->
+    <div class="flex lg:flex-col items-center gap-1 text-navy-light font-bold text-2xl">
+      <span class="hidden lg:block rotate-0">→</span>
+      <span class="hidden lg:block rotate-0">→</span>
+      <span class="hidden lg:block rotate-0">→</span>
+      <span class="lg:hidden">↓</span>
+    </div>
+
+    <!-- Center: HTF -->
+    <div class="flex flex-col items-center">
+      <div
+        class="w-36 h-36 rounded-full bg-navy flex flex-col items-center justify-center text-white shadow-lg border-4 border-teal"
+      >
+        <span class="text-3xl font-bold">HTF</span>
+        <span class="text-xs text-blue-200 mt-1 text-center leading-tight px-2">Healthcare<br/>Trust Fund</span>
+      </div>
+    </div>
+
+    <!-- Arrow pointing right (desktop) / down (mobile) -->
+    <div class="text-navy-light font-bold text-2xl">
+      <span class="hidden lg:block">→</span>
+      <span class="lg:hidden">↓</span>
+    </div>
+
+    <!-- Right: Care recipients -->
+    <div class="flex flex-col gap-3">
+      {[
+        { icon: '🩺', label: 'Doctors & specialists' },
+        { icon: '🏥', label: 'Hospitals & facilities' },
+        { icon: '💊', label: 'Pharmacies & drugs' },
+      ].map(({ icon, label }) => (
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center text-xl flex-shrink-0">{icon}</div>
+          <span class="text-sm font-medium text-gray-700">{label}</span>
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+  <!-- You: patient at the bottom -->
+  <div class="mt-8 flex flex-col items-center gap-2 text-sm text-gray-500">
+    <div class="flex items-center gap-2">
+      <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+      </svg>
+      <span>You pay your income-based co-pay. The HTF covers the rest. No bills from the provider.</span>
+    </div>
+  </div>
+</div>

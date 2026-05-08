@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Get Involved"
+  description="This legislation is being written in the open. Patients, clinicians, researchers, technologists, and advocates are all welcome."
+>
+
+  <!-- Header -->
+  <section class="bg-navy text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Get involved</h1>
+      <p class="text-blue-200 text-lg max-w-2xl leading-relaxed">
+        This legislation is being written in the open. If you're a patient, clinician, researcher,
+        technologist, advocate, or public servant — your voice belongs here.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ways to contribute -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-10 text-center">How you can contribute</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            icon: '💬',
+            title: 'Share your experience',
+            body: 'Patients and families: your stories expose the real gaps this act is designed to close. Open an issue on GitHub to share what you\'ve faced.',
+            cta: 'Open an issue',
+            href: 'https://github.com/erikpt/UniversalHealthAccessAct/issues/new',
+          },
+          {
+            icon: '📝',
+            title: 'Propose an amendment',
+            body: 'If you see something in the bill that\'s wrong, incomplete, or could be improved — submit a pull request with your proposed change and your reasoning.',
+            cta: 'Submit a pull request',
+            href: 'https://github.com/erikpt/UniversalHealthAccessAct/pulls',
+          },
+          {
+            icon: '🔬',
+            title: 'Contribute research',
+            body: 'Data scientists, health economists, clinicians: bring evidence. The Background Information directory is open for supporting analysis and citations.',
+            cta: 'View the repository',
+            href: 'https://github.com/erikpt/UniversalHealthAccessAct',
+          },
+        ].map(({ icon, title, body, cta, href }) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 flex flex-col">
+            <div class="text-3xl mb-4">{icon}</div>
+            <h3 class="font-semibold text-navy mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed flex-1">{body}</p>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-5 inline-block text-sm font-semibold text-teal hover:underline"
+            >
+              {cta} →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we're looking for -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl font-bold text-navy mb-4">Who we're looking for</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          This project benefits most from diversity of experience. We especially welcome:
+        </p>
+        <ul class="space-y-3 text-sm text-gray-700">
+          {[
+            'Patients who have navigated insurance denials, gaps in coverage, or catastrophic medical bills',
+            'Clinicians frustrated by prior authorization and administrative burden',
+            'Health economists and policy researchers who can stress-test the financial models',
+            'Technology professionals who want to help design the National Health Portal',
+            'Advocates for rural communities, disability communities, and underserved populations',
+            'State-level public servants who understand Medicaid transition mechanics',
+            'Constitutional and administrative law experts',
+            'People who disagree with the approach — constructive opposition strengthens legislation',
+          ].map((item) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-teal mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-navy mb-4">How the project works</h2>
+        <div class="space-y-4 text-sm text-gray-600">
+          <p class="leading-relaxed">
+            The bill text lives in a public GitHub repository. Contributions are made through
+            GitHub Issues (for discussion, questions, and feedback) and Pull Requests
+            (for proposed changes to the bill text or supporting documents).
+          </p>
+          <p class="leading-relaxed">
+            You don't need to know how to code. GitHub is just a version-controlled document editor
+            here. If you can edit a Word document, you can contribute.
+          </p>
+          <p class="leading-relaxed">
+            All major changes are debated in the open. The bill evolves through consensus-building,
+            not unilateral edits. A changelog tracks every revision.
+          </p>
+
+          <div class="bg-navy/5 rounded-lg p-4 mt-4">
+            <p class="font-semibold text-navy mb-2">New to GitHub?</p>
+            <p>
+              You can comment directly in any
+              <a
+                href="https://github.com/erikpt/UniversalHealthAccessAct/issues"
+                class="text-teal underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >open issue</a> without creating an account — just scroll to the bottom of the issue page.
+              Or email us with your feedback and we'll post it on your behalf.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 px-4 bg-navy text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Ready to get started?</h2>
+      <p class="text-blue-200 mb-8 leading-relaxed">
+        The simplest first step: read the bill. Then open an issue with your first question or reaction.
+        Every piece of legislation starts with someone saying "this could be better."
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://github.com/erikpt/UniversalHealthAccessAct/blob/main/Bill_Text.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+        >
+          Read the bill
+        </a>
+        <a
+          href="https://github.com/erikpt/UniversalHealthAccessAct/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border border-blue-300 hover:border-white text-blue-200 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+        >
+          Open an issue
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

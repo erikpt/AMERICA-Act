@@ -1,0 +1,80 @@
+---
+// Year 1 HTF funding sources in billions
+// UHAA Payroll: residual after other identified inflows (~$3,030B)
+// Medicaid MOE: ~$950B  |  Medicare: ~$750B  |  Employer MOE: ~$665B  |  Co-pays: ~$55B
+---
+
+<div class="relative" style="height: 360px;">
+  <canvas id="funding-chart" aria-label="HTF Year 1 funding sources breakdown" role="img"></canvas>
+</div>
+
+<script>
+  import Chart from 'chart.js/auto';
+
+  const canvas = document.getElementById('funding-chart') as HTMLCanvasElement;
+
+  new Chart(canvas, {
+    type: 'doughnut',
+    data: {
+      labels: [
+        'UHAA Payroll',
+        'Medicaid Realignment',
+        'Medicare Realignment',
+        'Employer MOE',
+        'Co-pays & Other',
+      ],
+      datasets: [
+        {
+          data: [3030, 950, 750, 665, 56],
+          backgroundColor: [
+            '#1B3A6B',
+            '#2A9D8F',
+            '#2A5298',
+            '#E9C46A',
+            '#9CA3AF',
+          ],
+          borderWidth: 2,
+          borderColor: '#ffffff',
+          hoverOffset: 8,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '62%',
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: {
+            font: { family: 'Inter', size: 12 },
+            padding: 14,
+            generateLabels: (chart) => {
+              const data = chart.data;
+              const total = (data.datasets[0].data as number[]).reduce((a, b) => a + b, 0);
+              return (data.labels as string[]).map((label, i) => {
+                const value = (data.datasets[0].data as number[])[i];
+                const pct = ((value / total) * 100).toFixed(0);
+                return {
+                  text: `${label}  $${value.toLocaleString()}B (${pct}%)`,
+                  fillStyle: (data.datasets[0].backgroundColor as string[])[i],
+                  hidden: false,
+                  index: i,
+                };
+              });
+            },
+          },
+        },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const total = (ctx.dataset.data as number[]).reduce((a: number, b: unknown) => a + (b as number), 0);
+              const pct = (((ctx.raw as number) / total) * 100).toFixed(1);
+              return ` $${(ctx.raw as number).toLocaleString()}B — ${pct}% of Year 1 inflows`;
+            },
+          },
+        },
+      },
+    },
+  });
+</script>

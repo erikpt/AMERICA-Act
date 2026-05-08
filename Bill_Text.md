@@ -162,7 +162,12 @@ Amounts redirected under this Section replace duplicative outlays for Essential 
 2. **Automatic Adjusters.** All statutory caps, thresholds, penalties, and administrative limits under this Act are indexed to **Core CPI** unless otherwise specified.
 
 #### (d) Hospital Global Budgets; Site‑Neutral Payment.
-1. **All‑Payer Global Budgets.** Beginning in plan year 2, hospitals shall be paid under **global budgets** established by HHS (or approved state rate‑setting entities). Aggregate budget growth shall not exceed **Core CPI + 0.5 percentage points** annually unless waived for population need or declared emergencies.  
+1. **All‑Payer Global Budgets.** Beginning in plan year 2, hospitals shall be paid under **global budgets** established by HHS (or approved state rate‑setting entities). Aggregate budget growth shall not exceed:
+   **(A)** Core CPI **+ 2.5 percentage points** in Plan Years 1–2 (transition and infrastructure build);
+   **(B)** Core CPI **+ 1.5 percentage points** in Plan Years 3–5 (initial implementation);
+   **(C)** Core CPI **+ 1.0 percentage points** in Plan Years 6–10 (maturing system);
+   **(D)** Core CPI **+ 0.5 percentage points** in Plan Year 11 and thereafter (long‑run target);
+   unless waived for population need or declared emergencies. The Secretary shall publish a **Pathway to Long‑Run Discipline Report** every two years beginning in Plan Year 3, assessing whether the step‑down schedule remains on track and recommending adjustments to Congress if structural factors (workforce costs, demographic demand, or capital needs) indicate the schedule requires revision. If the HTF reserve threshold in Section 5(g)(3) is met for two consecutive years during Plan Years 1–5, the Secretary may, with MAC concurrence, advance the next phase of the step‑down schedule by up to one year, subject to joint resolution of disapproval.  
 2. **Site‑Neutrality & Facility Fees.** For routine outpatient services (including imaging, labs, and telehealth), the HTF shall pay **site‑neutral** rates. **Facility fees** for off‑campus or non‑hospital settings are prohibited unless HHS determines clear cost justification.  
 3. **Primary‑Care & Behavioral Health Models.** HHS may implement **risk‑adjusted capitation** for primary care and behavioral health with retrospective outlier review.
 
@@ -180,6 +185,7 @@ HTF administrative expenditures shall not exceed **7%** of total HTF outlays.
 1. HHS shall annually model five‑year revenues and outlays and **publish quarterly reserve metrics** for the HTF.  
 2. If projected deficits exceed **3%** of outlays, **automatic, temporary adjustments** shall increase UHAA payroll rates by up to **0.5 percentage points** across brackets and/or raise Employer MOE by up to **0.5 percentage points of payroll**, subject to a joint resolution of disapproval.  
 3. If cumulative reserves exceed **two months of outlays** for two consecutive years, the Secretary may **reduce** UHAA payroll rates or Employer MOE by up to **0.5 percentage points**, consistent with actuarial balance.
+4. **Transition Reserve Floor.** During Plan Years 1 through 5, HTF operating reserves shall not fall below **one month of projected outlays**. Breach of this floor shall immediately trigger the automatic adjusters in paragraph (2) without waiting for the projected-deficit threshold, and the Secretary shall notify Congress within 5 business days. Monthly reserve levels shall be published on the NHP during Plan Years 1 through 3; weekly if reserves fall below the one-month floor.
 
 #### (h) Pharmaceutical Pricing.
 1. **Generics First.** HTF prioritizes generics when clinically appropriate.  
@@ -245,10 +251,18 @@ If a manufacturer **refuses to offer reasonable terms** under Section 5(h) or en
 
 #### (a) Timeline and Phase Gates.
 1. **Year 1.** Establish HTF, MAC lottery, data pipelines (IRS, CMS, states), NHP, and payment operations; publish initial **site‑neutral** schedule; pilot hospital global budgets.  
-2. **Year 2.** Consolidate **Medicare HI** and **Parts B/D** flows into HTF; launch national **global budgets** with **Core‑CPI+0.5** caps; begin Employer MOE at **5%** of payroll.  
-3. **Years 3–4.** Raise Employer MOE to **7.5%**; complete Medicaid MOE transition for all states; phase in mental health, DHV, and LTSS coverage.  
+2. **Year 2.** Consolidate **Medicare HI** and **Parts B/D** flows into HTF; launch national **global budgets** under the phased growth cap in Section 5(d)(1); begin Employer MOE at **5.0%** of payroll.  
+3. **Years 3–4.** Raise Employer MOE to **6.25%** of payroll in Year 3 and **7.5%** of payroll in Year 4; complete Medicaid MOE transition for all states; phase in mental health, DHV, and LTSS coverage.  
 4. **Years 2–5.** Phase‑out private insurance for Essential Services; fully implement site‑neutral payments and facility‑fee restrictions.  
 5. **Pre‑Implementation Certification.** Not later than **90 days before** each major phase in paragraphs (2)–(4), the Secretary shall obtain: (A) a **CBO cost estimate** showing no increase in the unified federal deficit over the budget window attributable to the phase; and (B) an **independent actuarial certification** that the HTF remains in **actuarial balance** under the **Core‑CPI** growth caps.
+
+#### (a)(6) Reform Savings Milestones.
+The Secretary shall certify achievement of the following annual savings targets, with remediation plans required if any target is missed by more than 15 percent in a given plan year:
+   **(A) Administrative simplification:** $30B by end of Plan Year 1; $90B by end of Plan Year 3; $150B by end of Plan Year 5.
+   **(B) Drug pricing (combined base and class‑based negotiation):** $30B by end of Plan Year 2; $80B by end of Plan Year 4.
+   **(C) Site‑neutral payments:** Rulemaking complete by end of Plan Year 1; $20B in savings by end of Plan Year 3 (subject to judicial resolution); $60B by end of Plan Year 5.
+   **(D) Global hospital budgets:** Pilot in not fewer than 5 states by end of Plan Year 1; national rollout by Plan Year 2 with $30B in savings; $90B by end of Plan Year 5.
+   **(E) Reporting.** HHS shall publish an annual Reform Savings Progress Report on the NHP comparing realized savings against these milestones. Where savings exceed milestones in a given category, the Secretary may apply the surplus to accelerate step‑down of the growth cap under Section 5(d)(1)(D).
 
 #### (b) Impact on Stakeholders.
 1. Insurers pivot to supplemental markets and administrative services.  
@@ -267,6 +281,11 @@ HHS shall report annually on coverage, wait times (<30 days for non‑urgent car
 #### (e) Transition Ombuds Office (TOO).
 1. **Establishment.** A **TOO** is established within HHS and accessible through the NHP to resolve beneficiary transition issues, continuity disputes, and appeals.  
 2. **Authority.** The TOO may issue binding determinations on transition disputes subject to judicial review and shall publish anonymized quarterly reports of issues and resolutions.
+
+#### (f) Initial HTF Capitalization.
+1. **HI Trust Fund Transfer.** Upon HTF establishment, the Secretary of the Treasury shall transfer the full balance of the Medicare Hospital Insurance Trust Fund to the HTF as initial operating reserves, consistent with the consolidation in Section 5(a)(3)(A). Such balance shall be recorded on the HTF balance sheet and reported in the first annual HTF financial statement.
+2. **Startup Appropriation Authority.** There is hereby authorized to be appropriated to the HTF, for Plan Year 1 only, such sums as necessary to fund administrative infrastructure, National Health Portal buildout, MAC operations, beneficiary enrollment systems, and provider onboarding, **not to exceed $50,000,000,000**. Amounts appropriated under this paragraph shall be repaid to the General Fund from HTF operating surpluses by the end of Plan Year 4, with interest at the 10-year Treasury rate.
+3. **Reserve Reporting.** HHS shall publish monthly HTF reserve levels during Plan Years 1 through 3 on the NHP, transitioning to quarterly thereafter. If reserves fall below one month of projected outlays at any time during Plan Years 1 through 5, reporting frequency shall revert to weekly until the floor is restored.
 
 ---
 

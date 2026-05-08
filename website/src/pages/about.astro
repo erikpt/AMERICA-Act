@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    q: 'Will I have to change my doctor?',
+    a: 'No. Any licensed provider in the United States participates in the program automatically. No networks, no referrals needed for essential care. If your doctor is licensed, they\'re in.',
+  },
+  {
+    q: 'What happens to my current insurance?',
+    a: 'The program phases in over five years. Your current coverage continues during the transition. Private insurance for essential care winds down gradually — no one loses coverage overnight. Supplemental insurance for non-essential services continues indefinitely.',
+  },
+  {
+    q: 'What if I\'m in the middle of cancer treatment or a pregnancy?',
+    a: 'Continuity of care is protected. If you\'re in active treatment — cancer, pregnancy, dialysis, behavioral health — you keep your current providers for at least 12 months, uninterrupted.',
+  },
+  {
+    q: 'What about small businesses? We currently pay for employee insurance.',
+    a: 'Employers contribute what they were already spending on premiums — through a payroll-based Employer MOE (Maintenance of Effort). The phase-in starts at 5% of payroll in Year 2, reaching 7.5% by Year 4. Many small businesses currently spend more than 7.5% of payroll on premiums, so this is a cost reduction for them.',
+  },
+  {
+    q: 'Is this socialism? Government takeover?',
+    a: 'No. Hospitals and doctors remain private. You choose who you see. The only thing that changes is how the bill is paid. This is closer to how Medicare works for seniors — the government pays the bill, providers stay private, patients choose freely.',
+  },
+  {
+    q: 'What if the government raids the fund for other purposes?',
+    a: 'The bill includes strict anti-raiding safeguards, including a proposed constitutional amendment to protect the HTF balance from executive or legislative diversion. Unilateral executive changes are barred; any attempt triggers automatic federal court injunctive relief.',
+  },
+  {
+    q: 'Will doctors get paid less?',
+    a: 'Provider payments are set at Medicare-level base rates indexed to the Medical Consumer Price Index (CPI-M) — not frozen at fixed dollar amounts. Rural providers receive a 10% bonus. The simplified billing system reduces administrative overhead, which many providers say currently consumes 20–30% of their time.',
+  },
+  {
+    q: 'Who decides what\'s covered?',
+    a: 'The Medical Advisory Committee (MAC) — two physicians per state, selected by lottery from licensed practitioners — reviews and updates the essential benefit list biannually. Recommendations are binding unless overridden by a two-thirds supermajority of Congress. The lottery structure removes lobbying pressure from the benefit-definition process.',
+  },
+  {
+    q: 'What about the national debt?',
+    a: 'Independent projections show the program is financially positive from Year 1, with a 10-year cumulative HTF surplus of ~$5.1 trillion. Administrative simplification alone saves an estimated $430B/year once fully phased in. The program also improves federal fiscal balance by eliminating the current government\'s healthcare subsidy patchwork.',
+  },
+  {
+    q: 'Can I still buy private insurance?',
+    a: 'Yes — for non-essential services: luxury accommodations, elective cosmetic procedures, dental upgrades, and other extras. HSAs are fully preserved. Supplemental insurance is an active market — similar to how it works in France, Germany, and Australia.',
+  },
+];
+---
+
+<BaseLayout
+  title="About the Act"
+  description="How the Universal Healthcare Access Act works — governance, funding, provider payments, and frequently asked questions."
+>
+
+  <!-- Header -->
+  <section class="bg-navy text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">About the Act</h1>
+      <p class="text-blue-200 text-lg max-w-2xl leading-relaxed">
+        The Universal Healthcare Access Act of 2026 establishes a hybrid single-payer model.
+        The Healthcare Trust Fund becomes the primary payer for essential services.
+        Supplemental private insurance and HSAs continue for non-essential care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key pillars -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-10 text-center">How it's structured</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'Healthcare Trust Fund (HTF)',
+            icon: '🏦',
+            body: 'A dedicated federal fund — the single payer for essential services. Strict anti-raiding provisions, monthly reserve reporting, and a constitutional amendment protect its integrity.',
+          },
+          {
+            title: 'Medical Advisory Committee',
+            icon: '🎲',
+            body: 'Two physicians per state, selected by lottery from licensed practitioners. Updates the essential benefit list biannually. Binding recommendations unless overridden by Congress.',
+          },
+          {
+            title: 'Progressive funding',
+            icon: '📊',
+            body: 'Payroll contributions with no income cap. Workers below the poverty line pay nothing. Employers contribute what they already spend on premiums. Existing Medicare/Medicaid funding redirected.',
+          },
+          {
+            title: 'Anti-fraud & transparency',
+            icon: '🔍',
+            body: 'AI-powered fraud detection, mandatory price transparency, and a National Health Portal. Administrative overhead capped at 7% by statute. Automatic corrective mechanisms.',
+          },
+          {
+            title: 'Provider stability',
+            icon: '🩺',
+            body: 'Medicare-level base rates indexed to CPI-M. 10% rural bonus. Simplified billing eliminates the administrative burden that consumes 20–30% of provider time today.',
+          },
+          {
+            title: 'Innovation fund',
+            icon: '🔬',
+            body: '1% of HTF outlays dedicated to a Healthcare Innovation Fund. 2% surge fund for emergencies. Five-year GAO reviews with adaptive budgeting.',
+          },
+        ].map(({ title, icon, body }) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+            <div class="text-2xl mb-3">{icon}</div>
+            <h3 class="font-semibold text-navy mb-2">{title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- International precedents -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-4">Built on what works</h2>
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        No single country's system was copied. The UHAA draws on proven mechanisms
+        from peer nations and domestic programs:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          {
+            source: 'France — ONDAM',
+            detail: 'Phased annual growth caps on total healthcare spending, with parliamentary approval required for adjustments. Used since 1996.',
+          },
+          {
+            source: 'Taiwan — National Health Insurance',
+            detail: 'Single-payer with free provider choice and income-based premiums. Launched in 1995; achieves universal coverage at ~6% of GDP.',
+          },
+          {
+            source: 'Maryland All-Payer Model',
+            detail: 'Global hospital budgets that constrain total facility spending while preserving private ownership. Demonstrated cost control in a U.S. state.',
+          },
+          {
+            source: 'Canada — Provincial Budgets',
+            detail: 'Site-neutral payments and provincial spending envelopes constrain growth while maintaining universal access.',
+          },
+          {
+            source: 'Medicare (U.S.)',
+            detail: 'Provider payment structure, billing simplification, and HI Trust Fund capitalization model directly inform the HTF design.',
+          },
+          {
+            source: 'VA / TRICARE (U.S.)',
+            detail: 'Existing successful federal healthcare programs that continue operating under UHAA, with coordination provisions.',
+          },
+        ].map(({ source, detail }) => (
+          <div class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div class="w-2 h-2 rounded-full bg-teal mt-2 flex-shrink-0"></div>
+            <div>
+              <div class="font-semibold text-navy text-sm">{source}</div>
+              <div class="text-sm text-gray-600 mt-1">{detail}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold text-navy mb-8">Frequently asked questions</h2>
+      <div class="space-y-3">
+        {faqs.map(({ q, a }) => (
+          <details class="group border border-gray-200 rounded-lg overflow-hidden">
+            <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
+              <span>{q}</span>
+              <svg
+                class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4 transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+              {a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Read the bill CTA -->
+  <section class="py-12 px-4 bg-navy text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-xl font-bold mb-3">Read the full legislative text</h2>
+      <p class="text-blue-200 text-sm mb-6">
+        All 18 sections, including funding, governance, transition provisions, and enforcement mechanisms.
+      </p>
+      <a
+        href="https://github.com/erikpt/UniversalHealthAccessAct/blob/main/Bill_Text.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+      >
+        Bill Text on GitHub ↗
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
