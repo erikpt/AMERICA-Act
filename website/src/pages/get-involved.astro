@@ -22,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="py-16 px-4">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-2xl font-bold text-navy mb-10 text-center">How you can contribute</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
           {
             icon: '💬',
@@ -44,6 +44,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             body: 'Data scientists, health economists, clinicians: bring evidence. The Background Information directory is open for supporting analysis and citations.',
             cta: 'View the repository',
             href: 'https://github.com/erikpt/AMERICA-Act',
+          },
+          {
+            icon: '🏛️',
+            title: 'Contact your representatives',
+            body: 'Call or write your Senators and House member. Tell them you support universal coverage and want them to champion it. Constituent contact moves legislation — it matters more than most people think.',
+            cta: 'Find your representatives',
+            href: 'https://www.congress.gov/members/find-your-member',
           },
         ].map(({ icon, title, body, cta, href }) => (
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 flex flex-col">

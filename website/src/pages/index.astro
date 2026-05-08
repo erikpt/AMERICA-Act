@@ -62,7 +62,7 @@ import Timeline from '../components/Timeline.astro';
       <p class="text-gray-500 text-center mb-12 max-w-xl mx-auto">
         The same doctors. The same hospitals. Just a simpler system that puts you first.
       </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           {
             icon: '🗺️',
@@ -83,6 +83,11 @@ import Timeline from '../components/Timeline.astro';
             icon: '🚫',
             title: 'No surprise bills',
             body: 'Balance billing is illegal. You pay your co-pay. That\'s the full bill.',
+          },
+          {
+            icon: '📋',
+            title: 'Your records follow you',
+            body: 'Every provider is in-network — which means every provider can access your full medical history. No more repeating yourself, no more lost records, no more dangerous gaps between care teams.',
           },
         ].map(({ icon, title, body }) => (
           <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -179,23 +184,31 @@ import Timeline from '../components/Timeline.astro';
   <!-- Bottom CTA -->
   <section class="py-20 px-4 bg-navy text-white text-center">
     <div class="max-w-2xl mx-auto">
-      <h2 class="text-3xl font-bold mb-4">This is a draft. Your input shapes it.</h2>
+      <h2 class="text-3xl font-bold mb-4">Make this happen.</h2>
       <p class="text-blue-200 mb-8 leading-relaxed">
-        This legislation is being written in the open. Read the full bill, propose amendments,
-        or share your story. Everyone affected by healthcare has a seat at this table.
+        This legislation is being written in the open — and it only moves forward if people
+        demand it. Read the bill, shape it, and tell your representatives you want it passed.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="/bill"
+          href="https://www.congress.gov/members/find-your-member"
+          target="_blank"
+          rel="noopener noreferrer"
           class="bg-teal hover:bg-teal/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
         >
-          Read the full bill
+          Contact your representatives
         </a>
         <a
           href="/get-involved"
           class="border border-blue-300 hover:border-white text-blue-200 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors"
         >
           Get involved
+        </a>
+        <a
+          href="/bill"
+          class="border border-blue-300 hover:border-white text-blue-200 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+        >
+          Read the bill
         </a>
       </div>
     </div>
