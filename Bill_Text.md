@@ -287,6 +287,28 @@ HHS shall report annually on coverage, wait times (<30 days for non‑urgent car
 2. **Startup Appropriation Authority.** There is hereby authorized to be appropriated to the HTF, for Plan Year 1 only, such sums as necessary to fund administrative infrastructure, National Health Portal buildout, MAC operations, beneficiary enrollment systems, and provider onboarding, **not to exceed $50,000,000,000**. Amounts appropriated under this paragraph shall be repaid to the General Fund from HTF operating surpluses by the end of Plan Year 4, with interest at the 10-year Treasury rate.
 3. **Reserve Reporting.** HHS shall publish monthly HTF reserve levels during Plan Years 1 through 3 on the NHP, transitioning to quarterly thereafter. If reserves fall below one month of projected outlays at any time during Plan Years 1 through 5, reporting frequency shall revert to weekly until the floor is restored.
 
+#### (g) Medicare Advantage (Part C) and Medigap Transition.
+1. **Plan Wind‑Down.** CMS shall not enter into or renew Medicare Advantage contracts under 42 U.S.C. § 1395w‑27 for plan years beginning on or after **Plan Year 3**. Existing contracts shall honor their current plan year and shall not be extended.
+
+2. **Automatic Enrollment.** Not later than **180 days before** the Plan Year 3 effective date, CMS shall: (A) notify each Medicare Advantage enrollee in writing of their automatic enrollment in HTF Essential Services coverage; (B) provide enrollment assistance, supplemental plan options meeting Section 4(b) standards, and Transition Ombuds contact information; and (C) ensure seamless assignment of a primary care team consistent with Section 5(k).
+
+3. **Supplemental Market Continuation.** Medicare Advantage organizations may continue to offer supplemental coverage for non‑Essential Services consistent with Section 4(b), including dental upgrades, vision hardware, fitness benefits, and transportation. Such organizations shall not offer or market coverage duplicative of Essential Services covered by the HTF and shall comply with Standardized Supplemental Plan (SSP) standards published under Section 4(b)(6).
+
+4. **Special Needs Plans (SNPs).**
+   (A) **Dual‑Eligible SNPs (D‑SNPs)** shall transition Essential Services coverage to the HTF and may continue as supplemental care‑coordination plans for Medicaid‑eligible individuals under joint HHS/CMS transition rules published no later than the end of **Plan Year 1**.
+   (B) **Chronic Condition SNPs (C‑SNPs)** shall continue through **Plan Year 4** to protect continuity for enrollees with qualifying chronic conditions; Essential Services coverage shall transfer to the HTF upon plan‑year expiration and supplemental care management may continue under Section 4(b).
+   (C) **Institutional SNPs (I‑SNPs)** shall transition consistent with the LTSS framework under Section 20.
+
+5. **Capitation Wind‑Down.** CMS shall cease risk‑adjusted capitation payments for Essential Services to Medicare Advantage organizations as HTF coverage takes effect for each beneficiary. CMS shall publish the final capitation wind‑down methodology no later than **12 months** before the Plan Year 3 effective date.
+
+6. **Extra Benefits Classification.** Within **180 days** of enactment, HHS shall publish guidance classifying current Medicare Advantage extra benefits (including over‑the‑counter allowances, transportation, fitness, and meal programs) as essential or supplemental for purposes of this Act. Benefits classified as non‑essential are eligible for supplemental plan offerings under Section 4(b).
+
+7. **Medigap Alignment.** Medicare Supplement (Medigap) policies issued or renewed after the effective date of this Act shall comply with the supplemental plan standards of Section 4(b), including Required Minimum Benefits under Section 4(b)(6). Existing policyholders are grandfathered through their current policy year; policies shall conform to Section 4(b) upon first renewal after the effective date.
+
+8. **Transition Plan.** Within **180 days** of enactment, CMS shall publish a Medicare Advantage Transition Plan covering: (A) beneficiary notification and enrollment assistance timelines; (B) plan wind‑down and contract termination procedures; (C) network adequacy standards for HTF during the transition period, including rural and SNP populations; (D) workforce transition support for Medicare Advantage plan employees; and (E) coordination with state Medicaid agencies for dual‑eligible transitions.
+
+9. **Continuity of Care.** Medicare Advantage enrollees in active treatment as described in Section 7(d)(1) retain all continuity‑of‑care protections for a minimum of **12 months** following their effective HTF enrollment date.
+
 ---
 
 ### SECTION 8. ENFORCEMENT AND PENALTIES
@@ -318,10 +340,11 @@ This Act preempts state laws that conflict with HTF operations under the Suprema
 #### (b) HTF Primary Payer; Third‑Party Recoveries.
 The HTF is the **primary payer** for medical expenses related to injuries or illnesses covered by other insurance, including **WC, auto/PIP, liability, and no‑fault**. The HTF shall have **subrogation and reimbursement rights** to recover the reasonable value of services from third parties or their insurers; beneficiaries shall cooperate with recovery consistent with due process protections.
 
-#### (c) Federal Programs (FEHB/CHIP/Exchanges) Conforming.
+#### (c) Federal Programs (FEHB/CHIP/Exchanges/Medicare Advantage) Conforming.
 1. **FEHB Alignment.** FEHB medical coverage for Essential Services shall transition to the HTF by **the start of Year 3**; FEHB may continue to offer **supplemental** benefits consistent with Section 4(b).  
 2. **CHIP Coordination.** CHIP medical benefits for Essential Services transition to the HTF by **the start of Year 3**; federal and state CHIP funding streams become part of Medicaid MOE to HTF.  
-3. **ACA Exchanges Sunset.** Qualified Health Plans offering Essential Services on exchanges shall sunset for plan years **beginning Year 3**; exchanges may continue as **supplemental marketplaces**.
+3. **ACA Exchanges Sunset.** Qualified Health Plans offering Essential Services on exchanges shall sunset for plan years **beginning Year 3**; exchanges may continue as **supplemental marketplaces**.  
+4. **Medicare Advantage (Part C) Sunset.** Medicare Advantage contracts shall not be renewed for plan years beginning on or after **Plan Year 3**; Medicare Advantage organizations may offer supplemental plans consistent with Section 4(b). Full transition mechanics, Special Needs Plan treatment, capitation wind‑down, and Medigap alignment are governed by **Section 7(g)**.
 
 #### (d) Workers’ Compensation Coordination.
 States shall coordinate WC medical benefits with the HTF. WC carriers shall **reimburse** the HTF for medical expenditures paid on compensable WC claims; disputes are resolved via federal standards with deference to state determinations of compensability.
