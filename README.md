@@ -1,7 +1,9 @@
-# UniversalHealthAccessAct
-We’re building this project in the open to craft people-centered legislation for a hybrid single-payer health care system in the United States. By combining policy expertise, real-world experience, and collaborative problem solving, we can design an approach that protects essential care for everyone while welcoming supplemental innovation.
+# AMERICA Act
+### American Medical and Essential Rights to Inclusive Care Act
 
-Our mission is to convene patients, clinicians, researchers, technologists, advocates, and public servants to shape a framework that is inclusive, sustainable, and ready for legislative consideration. Whether you bring personal stories, data-driven insights, or drafting skills, your contribution helps refine the Universal Healthcare Access Act.
+Open-source model legislation for a hybrid single-payer healthcare system in the United States. We're building this in the open — combining policy expertise, lived experience, and collaborative problem-solving to craft a framework that guarantees essential care for every American while preserving supplemental innovation.
+
+Our mission is to convene patients, clinicians, researchers, technologists, advocates, and public servants to shape legislation that is inclusive, sustainable, and ready for congressional consideration. Whether you bring personal stories, data-driven insights, or drafting skills, your contribution helps strengthen the AMERICA Act.
 
 Explore the current working draft of the bill [here](Bill_Text.md), then share feedback, propose amendments, or suggest new ideas that advance the goal of equitable health care access.
 
@@ -12,16 +14,16 @@ Please make comments, and suggestions by opening an [Issue](issues) or if you'd 
 Use the links below to quickly find the major reference documents in this project:
 
 * **Core Texts**
-  * [Bill Text](Bill_Text.md) – Full legislative language for the Universal Healthcare Access Act.
-  * [Executive One-Pager](UHAA_One_Pager.md) – High-level summary for legislative staff briefings.
-  * [Voter Landing Page](UHAA_Voter_LandingPage.md) – Short, scannable summary for web and social.
-  * [Voter Handout](UHAA_Voter_Handout.md) – Print-ready summary for town halls and mailers.
-  * [Best Ideas World One-Pager](UHAA_Best_Ideas_World_OnePager.md) – Comparative insights that shaped the proposal.
+  * [Bill Text](Bill_Text.md) – Full legislative language for the AMERICA Act.
+  * [Executive One-Pager](AMERICA_Act_One_Pager.md) – High-level summary for legislative staff briefings.
+  * [Voter Landing Page](AMERICA_Act_Voter_LandingPage.md) – Short, scannable summary for web and social.
+  * [Voter Handout](AMERICA_Act_Voter_Handout.md) – Print-ready summary for town halls and mailers.
+  * [Best Ideas World One-Pager](AMERICA_Act_Best_Ideas_OnePager.md) – Comparative insights that shaped the proposal.
   * [Current Gaps Analysis](Current_Gaps.md) – Overview of systemic issues the Act is designed to address.
 * **Financial Modeling**
   * [Financials Overview](Financial%20Modeling/Financials.md) – Baseline assumptions and cost projections.
-  * [Back-of-the-Envelope Model](Financial%20Modeling/UHAA_BOTE_updated_with_waterfall.md) – Waterfall view of simplified financial modeling.
-  * [Microsimulation & Reform Financials](Financial%20Modeling/UHAA_microsim_and_reform_financials.md) – Detailed modeling for long-term sustainability.
+  * [Back-of-the-Envelope Model](Financial%20Modeling/AMERICA_Act_BOTE_updated_with_waterfall.md) – Waterfall view of simplified financial modeling.
+  * [Microsimulation & Reform Financials](Financial%20Modeling/AMERICA_Act_microsim_and_reform_financials.md) – Detailed modeling for long-term sustainability.
 
 Additional context and supporting materials can be found in the `Background Information/` directory and related documents within the repository.
 
@@ -29,7 +31,7 @@ Additional context and supporting materials can be found in the `Background Info
 
 # Executive Summary
 
-The Universal Healthcare Access Act of 2026 (UHAA) establishes a hybrid single-payer model in which the **Healthcare Trust Fund (HTF)** becomes the primary payer for **essential services** while allowing **supplemental private insurance** and continued use of **HSAs** for non-essential care. Eligibility extends to citizens, legal residents, and visitors for essential services. Cost-sharing is income-based with a strict **5% of AGI** annual cap, and preventive services remain **$0** at point of care. Funding derives from progressive payroll contributions with no income cap and strict **anti-raiding** safeguards, including a proposed constitutional amendment.
+The AMERICA Act of 2026 (American Medical and Essential Rights to Inclusive Care Act) establishes a hybrid single-payer model in which the **Healthcare Trust Fund (HTF)** becomes the primary payer for **essential services** while allowing **supplemental private insurance** and continued use of **HSAs** for non-essential care. Eligibility extends to citizens, legal residents, and visitors for essential services. Cost-sharing is income-based with a strict **5% of AGI** annual cap, and preventive services remain **$0** at point of care. Funding derives from progressive payroll contributions with no income cap and strict **anti-raiding** safeguards, including a proposed constitutional amendment.
 
 Administration rests with **HHS**, with strong guardrails against unilateral executive changes and a **Medical Advisory Committee (MAC)** that updates covered services biannually. Powerful anti-fraud provisions, a **National Health Portal** with expanded HIPAA protections, price transparency mandates, and a **Healthcare Innovation Fund** ensure sustainability and modernization. The Act phases in over five years, sunsets ERISA for health benefits, realigns Medicaid and ACA funds to the HTF, and coordinates state transitions via regional offices and waivers. GAO and CBO conduct ongoing reviews; corrective mechanisms ensure administrative overhead ≤ **7%** and timely provider payment.
 
@@ -45,7 +47,7 @@ Administration rests with **HHS**, with strong guardrails against unilateral exe
 * **Pharmacy**: Generics prioritized; national **cost-plus (+15%)** negotiation; no donut holes or phase gaps; drug OOP counted toward 5% AGI cap.
 * **States**: Regional coordination, optional waivers, and Medicaid/ACA fund realignment; state portals interoperable with national standards.
 * **Economy**: Consolidation reduces administrative waste; portability improves labor mobility; small-business formation facilitated by decoupling insurance from employment.
-* **Governance**: MAC lottery depoliticizes benefits; HHS “handcuffing” provision; automatic injunction against executive interference; robust OIG/GAO/CBO oversight.
+* **Governance**: MAC lottery depoliticizes benefits; HHS "handcuffing" provision; automatic injunction against executive interference; robust OIG/GAO/CBO oversight.
 * **Security & Privacy**: NIST-aligned cybersecurity; 24-hour breach notifications; patient-owned records with opt-in data sharing; AI bias/accuracy audits.
 * **Resilience & Innovation**: 2% surge fund for emergencies; 1% innovation fund; five-year GAO reviews with adaptive budgeting.
 
